@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CM KISAN YOJANA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-4 pb-0 px-0">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
+        <h1 class="text-2xl font-bold text-center text-blue-700 mb-6">CM KISAN YOJANA</h1>
+
+        <form action="cmkisan.php" method="post" enctype="multipart/form-data"
+            class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Letter No./Date -->
+            <div class="space-y-2 md:col-span-2">
+                <label class="font-medium">Letter No</label>
+                <input type="text" name="letter_no" value="CMK263"
+                    class="w-full p-2 border border-gray-300 rounded-md bg-gray-100" readonly>
+            </div>
+
+            <!-- Full Name and Father Name -->
+            <div class="space-y-2">
+                <label class="font-medium">Full Name<span class="text-red-500">*</span></label>
+                <input type="text" name="full_name" required class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+
+            <div class="space-y-2">
+                <label class="font-medium">Father Name<span class="text-red-500">*</span></label>
+                <input type="text" name="father_name" required class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+
+            <!-- Email and Mobile -->
+            <div class="space-y-2">
+                <label class="font-medium">Email<span class="text-red-500">*</span></label>
+                <input type="email" name="email" required class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+
+            <div class="space-y-2">
+                <label class="font-medium">Mobile<span class="text-red-500">*</span></label>
+                <input type="tel" name="mobile" required class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+
+            <!-- Gender and District -->
+            <div class="space-y-2">
+                <label class="font-medium">Gender</label>
+                <div class="flex gap-4">
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="gender" value="Male" checked class="form-radio text-blue-600">
+                        <span class="ml-2">Male</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="gender" value="Female" class="form-radio text-blue-600">
+                        <span class="ml-2">Female</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label class="font-medium">District<span class="text-red-500">*</span></label>
+                <input type="text" name="district" value="JAIPUR"
+                    class="w-full p-2 border border-gray-300 rounded-md bg-gray-100" readonly>
+            </div>
+
+            <div class="space-y-2">
+                <label class="font-medium">Ward<span class="text-red-500">*</span></label>
+                <select id="ward" name="ward" class="w-full p-2 border rounded" required>
+                    <option value="">Select Ward</option>
+                    <option value="Ward 1">Ward 1</option>
+                <option value="Ward 2">Ward 2</option>
+                <option value="Ward 3">Ward 3</option>
+                <option value="Ward 4">Ward 4</option>
+                <option value="Ward 5">Ward 5</option>
+                <option value="Ward 6">Ward 6</option>
+                <option value="Ward 7">Ward 7</option>
+                <option value="Ward 8">Ward 8</option>
+                <option value="Ward 9">Ward 9</option>
+                <option value="Ward 10">Ward 10</option>
+                <option value="Ward 11">Ward 11</option>
+                <option value="Ward 12">Ward 12</option>
+                <option value="Ward 13">Ward 13</option>
+                <option value="Ward 14">Ward 14</option>
+                <option value="Ward 15">Ward 15</option>
+                <option value="Ward 16">Ward 16</option>
+                <option value="Ward 17">Ward 17</option>
+                <option value="Ward 18">Ward 18</option>
+                <option value="Ward 19">Ward 19</option>
+                <option value="Ward 20">Ward 20</option>
+                <option value="Ward 21">Ward 21</option>
+                <option value="Ward 22">Ward 22</option>
+                <option value="Ward 23">Ward 23</option>
+                <option value="Ward 24">Ward 24</option>
+                <option value="Ward 25">Ward 25</option>
+                <option value="Ward 26">Ward 26</option>
+                <option value="Ward 27">Ward 27</option>
+                <option value="Ward 28">Ward 28</option>
+                <option value="Ward 29">Ward 29</option>
+                <option value="Ward 30">Ward 30</option>
+                <option value="Ward 31">Ward 31</option>
+                <option value="Ward 32">Ward 32</option>
+                <option value="Ward 33">Ward 33</option>
+                <option value="Ward 34">Ward 34</option>
+                <option value="Ward 35">Ward 35</option>
+                <option value="Ward 36">Ward 36</option>
+                <option value="Ward 37">Ward 37</option>
+                <option value="Ward 38">Ward 38</option>
+                <option value="Ward 39">Ward 39</option>
+                <option value="Ward 40">Ward 40</option>
+                </select>
+            </div>
+
+            <div class="space-y-2">
+                <label class="font-medium">Grampanchayat<span class="text-red-500">*</span></label>
+                <select name="grampanchayat" required class="w-full p-2 border border-gray-300 rounded-md">
+                    <option value="">Select GP / Ward</option>
+                    <option value="Ward 1">Ward 1</option>
+                    <option value="Ward 2">Ward 2</option>
+                    <option value="Ward 3">Ward 3</option>
+                    <option value="Ward 4">Ward 4</option>
+                    <option value="Ward 5">Ward 5</option>
+                </select>
+            </div>
+
+            <!-- Village/Locality and Pin Code -->
+            <div class="space-y-2">
+                <label class="font-medium">Village/Locality</label>
+                <textarea name="village" class="w-full p-2 border border-gray-300 rounded-md"></textarea>
+            </div>
+
+            <div class="space-y-2">
+                <label class="font-medium">Pin Code<span class="text-red-500">*</span></label>
+                <input type="text" name="pin_code" required class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+
+            <!-- Address -->
+            <div class="space-y-2 md:col-span-2">
+                <label class="font-medium">Address<span class="text-red-500">*</span></label>
+                <input type="text" name="address" required class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+
+            <!-- Document Uploads -->
+            <div class="space-y-2">
+                <label class="font-medium">Aadhar Card<span class="text-red-500">*</span></label>
+                <input type="file" name="aadhar_card" required class="w-full p-2 border border-gray-300 rounded-md">
+                <p class="text-sm text-red-500">Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.</p>
+            </div>
+
+            <div class="space-y-2">
+                <label class="font-medium">Ration Card<span class="text-red-500">*</span></label>
+                <input type="file" name="ration_card" required class="w-full p-2 border border-gray-300 rounded-md">
+                <p class="text-sm text-red-500">Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.</p>
+            </div>
+
+            <div class="space-y-2">
+                <label class="font-medium">Chasa Jami Pata<span class="text-red-500">*</span></label>
+                <input type="file" name="chasa_jami_pata" required class="w-full p-2 border border-gray-300 rounded-md">
+                <p class="text-sm text-red-500">Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.</p>
+            </div>
+
+            <div class="space-y-2">
+                <label class="font-medium">Krushak Registration Certificate<span class="text-red-500">*</span></label>
+                <input type="file" name="krushak_certificate" required
+                    class="w-full p-2 border border-gray-300 rounded-md">
+                <p class="text-sm text-red-500">Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.</p>
+            </div>
+
+            <div class="space-y-2 md:col-span-2">
+                <label class="font-medium">Bank Passbook<span class="text-red-500">*</span></label>
+                <input type="file" name="bank_passbook" required class="w-full p-2 border border-gray-300 rounded-md">
+                <p class="text-sm text-red-500">Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.</p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="md:col-span-2 mt-4">
+                <input type="submit"
+                    class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-6 rounded-md"></input>
+            </div>
+        </form>
+    </div>
+    <footer class="bg-white py-4 border-t">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-700">Copyright ©2024 MLA Dharmasala</p>
+            <div class="mt-2 flex justify-center items-center">
+                <p class="text-gray-700">Powered By :</p>
+                <span class="text-blue-500 ml-2 font-semibold">Spider Innovation </span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Form validation
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const requiredFields = document.querySelectorAll('[required]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    isValid = false;
+                    field.classList.add('border-red-500');
+                } else {
+                    field.classList.remove('border-red-500');
+                }
+
+                // File size validation
+                if (field.type === 'file' && field.files.length > 0) {
+                    const fileSize = field.files[0].size / 1024 / 1024; // in MB
+                    if (fileSize > 2) {
+                        isValid = false;
+                        field.classList.add('border-red-500');
+                        alert(`File ${field.name} exceeds 2MB limit`);
+                    }
+
+                    // File type validation
+                    const fileName = field.files[0].name;
+                    const fileExt = fileName.split('.').pop().toLowerCase();
+                    const allowedExts = ['pdf', 'doc', 'docx', 'xls', 'xlsx'];
+
+                    if (!allowedExts.includes(fileExt)) {
+                        isValid = false;
+                        field.classList.add('border-red-500');
+                        alert(`File ${field.name} has invalid extension. Allowed: pdf, doc, docx, xls, xlsx`);
+                    }
+                }
+            });
+
+            if (!isValid) {
+                e.preventDefault();
+                alert('Please fill all required fields correctly');
+            }
+        });
+    </script>
+</body>
+
+</html>

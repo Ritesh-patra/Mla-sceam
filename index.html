@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLA Dharmasala Assembly constituency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .scheme-card {
+            transition: transform 0.3s ease;
+        }
+        .scheme-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'header-orange': '#FF8C00',
+                        'header-orange-dark': '#FF7000',
+                        'footer-dark': '#1a1a2e',
+                    }
+                }
+            }
+        }
+    </script>
+   
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-header-orange to-header-orange-dark text-white">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-26%20140023-1BqH8GcIpqADOKQyToeK5Hu4WEsrJP.png" alt="Odisha Map Logo" class="h-16 mr-4">
+                <div>
+                    <h1 class="text-2xl font-bold">M L A Dharmasala</h1>
+                    <h2 class="text-xl">Assembly constituency</h2>
+                    <p class="text-sm">Grievance Redressal System</p>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="flex space-x-2">
+                    <div class="bg-white rounded-full p-1 hexagon">
+                        <img src="https://i.pinimg.com/736x/a7/f9/7f/a7f97f716fab818b938f8b9ae8f6944c.jpg" alt="MLA" class="h-12 w-12 rounded-full">
+                    </div>
+                    <div class="bg-white rounded-full p-1 hexagon">
+                        <img src="https://i.pinimg.com/474x/fb/5f/dd/fb5fdd3a1dea8d9664d6fcc147c5b7cb.jpg" alt="Official" class="h-12 w-12 rounded-full">
+                    </div>
+                    <div class="bg-white rounded-full p-1 hexagon">
+                        <img src="https://i.pinimg.com/736x/8d/95/03/8d9503a77e4c21ebf0ced6c252819a0e.jpg" alt="PM" class="h-12 w-12 rounded-full">
+                    </div>
+                    <div class="bg-white rounded-full p-1 hexagon">
+                        <img src="https://i.pinimg.com/736x/ce/11/29/ce11295c9a054ca2edf3a36333103c5b.jpg" alt="BJP Logo" class="h-12 w-12 rounded-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="bg-header-orange-dark py-2">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-white hover:text-gray-200">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <a href="https://kanilkumar.in/" class="text-white hover:text-gray-200">About</a>
+                </div>
+                <div>
+                    <select id="language-selector" class="px-2 py-1 rounded bg-gray-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option class="text-black bg-white" value="english" selected>English</option>
+                        <option class="text-black bg-white" value="odia">ଓଡ଼ିଆ</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold text-center text-indigo-700 mb-8" id="scheme-title">Scheme</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Ration Card -->
+                <a href="RationCard.html" class="bg-emerald-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-id-card text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="RATION CARD" data-od="ରେସନ କାର୍ଡ">RATION CARD</h3>
+                </a>
+                
+                <!-- Pension -->
+                <a href="pension.html" class="bg-yellow-300 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-user-friends text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="PENSION" data-od="ପେନସନ">PENSION</h3>
+                </a>
+                
+                <!-- Disability Certificate -->
+                <a href="disavility.html" class="bg-orange-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-wheelchair text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="DISABILITY CERTIFICATE" data-od="ଅକ୍ଷମତା ପ୍ରମାଣପତ୍ର">DISABILITY CERTIFICATE</h3>
+                </a>
+                
+                <!-- CM KISAN -->
+                <a href="cmkisan.html" class="bg-yellow-600 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-tractor text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="CM KISAN" data-od="ସିଏମ କିଶାନ">CM KISAN</h3>
+                </a>
+                
+                <!-- PM KISAN -->
+                <a href="pmkisan.html" class="bg-blue-300 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-tractor text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="PM KISAN" data-od="ପିଏମ କିଶାନ">PM KISAN</h3>
+                </a>
+                
+                <!-- BHUMIHINA -->
+                <a href="bhumikhina.html" class="bg-green-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-home text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="BHUMIHINA" data-od="ଭୂମିହୀନ">BHUMIHINA</h3>
+                </a>
+                
+                <!-- CASTE CERTIFICATE -->
+                <a href="cast.html" class="bg-red-300 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-file-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="CASTE CERTIFICATE" data-od="ଜାତି ପ୍ରମାଣପତ୍ର">CASTE CERTIFICATE</h3>
+                </a>
+                
+                <!-- INCOME CERTIFICATE -->
+                <a href="income.html" class="bg-blue-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-money-bill-wave text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="INCOME CERTIFICATE" data-od="ଆୟ ପ୍ରମାଣପତ୍ର">INCOME CERTIFICATE</h3>
+                </a>
+                
+                <!-- RESIDENT CERTIFICATE -->
+                <a href="resident.html" class="bg-green-600 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-address-card text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="RESIDENT CERTIFICATE" data-od="ବାସିନ୍ଦା ପ୍ରମାଣପତ୍ର">RESIDENT CERTIFICATE</h3>
+                </a>
+                
+                <!-- TOILET -->
+                <a href="pmtoilet.html" class="bg-gray-400 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-toilet text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="TOILET" data-od="ଶୌଚାଳୟ">TOILET</h3>
+                </a>
+                
+                <!-- AYUSHMAN CARD -->
+                <a href="ayushman.html" class="bg-gray-400 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                <div class="bg-yellow-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-home text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="AYUSHMAN CARD" data-od="ପିଏମ ଆବାସ ଯୋଜନା">AYUSHMAN CARD</h3>
+                </div>
+                
+                <!-- POLICE STATION -->
+                <a href="police.html" class="bg-gray-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-building text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="POLICE STATION" data-od="ପୋଲିସ ଷ୍ଟେସନ">POLICE STATION</h3>
+                </a>
+                
+                <!-- OTHERS -->
+                <div class="bg-gray-600 text-white p-6 rounded-lg shadow-md text-center scheme-card">
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-file text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-en="OTHERS" data-od="ଅନ୍ୟାନ୍ୟ">OTHERS</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4 border-t">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-700">Copyright ©2024 MLA Dharmasala</p>
+            <div class="mt-2 flex justify-center items-center">
+                <p class="text-gray-700">Powered By :</p>
+                <span class="text-blue-500 ml-2 font-semibold">Spider Innovation </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Language Switcher
+        const languageSelector = document.getElementById('language-selector');
+        const schemeTitle = document.getElementById('scheme-title');
+        const schemeCards = document.querySelectorAll('.scheme-card h3');
+        
+        languageSelector.addEventListener('change', function() {
+            const language = this.value;
+            
+            // Change title
+            if (language === 'english') {
+                schemeTitle.textContent = 'Scheme';
+            } else if (language === 'odia') {
+                schemeTitle.textContent = 'ଯୋଜନା';
+            }
+            
+            // Change card titles
+            schemeCards.forEach(card => {
+                if (language === 'english') {
+                    card.textContent = card.getAttribute('data-en');
+                } else if (language === 'odia') {
+                    card.textContent = card.getAttribute('data-od');
+                }
+            });
+        });
+        
+        // Add hover effect to scheme cards
+        const cards = document.querySelectorAll('.scheme-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('shadow-lg');
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('shadow-lg');
+            });
+        });
+    </script>
+</body>
+</html>

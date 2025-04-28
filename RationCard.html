@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievance Redressal System (Ration Card)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white p-4 px-0">
+    <div class="container mx-auto max-w-5xl">
+        <h1 class="text-center text-2xl font-bold text-[#4052b5] mb-6">Grievance Redressal System (Ration Card)</h1>
+        
+        <form action="ration.php" method="post" enctype="multipart/form-data" class="space-y-4" id="grievanceForm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Category -->
+                <div>
+                    <label class="text-base font-medium">Category</label>
+                    <div class="flex items-center space-x-4 mt-1">
+                        <div class="flex items-center space-x-1">
+                            <input type="radio" id="new" name="category" value="new" checked class="text-blue-600">
+                            <label for="new" class="cursor-pointer">New</label>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <input type="radio" id="add-member" name="category" value="add-member" class="text-blue-600">
+                            <label for="add-member" class="cursor-pointer">Add Member</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Letter No./Date -->
+                <div>
+                    <label for="letter-no" class="text-base font-medium">Letter No.</label>
+                    <input type="text" id="letter-no" name="letter-no" class="w-full p-2 border rounded bg-gray-100" value="RAN3243" readonly>
+                </div>
+
+                <!-- Full Name -->
+                <div>
+                    <label for="full-name" class="text-base font-medium">
+                        Full Name<span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="full-name" name="full-name" class="w-full p-2 border rounded" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Father Name -->
+                <div>
+                    <label for="father-name" class="text-base font-medium">
+                        Father Name<span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="father-name" name="father-name" class="w-full p-2 border rounded" placeholder="Enter father's name" required>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="text-base font-medium">
+                        Email<span class="text-red-500">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded" placeholder="Enter your email address" required>
+                </div>
+
+                <!-- Mobile -->
+                <div>
+                    <label for="mobile" class="text-base font-medium">
+                        Mobile <span class="text-red-500">*</span>
+                    </label>
+                    <input type="tel" id="mobile" name="mobile" class="w-full p-2 border rounded" placeholder="Enter 10-digit mobile number" required>
+                </div>
+
+                <!-- Gender -->
+                <div>
+                    <label class="text-base font-medium">Gender</label>
+                    <div class="flex items-center space-x-4 mt-1">
+                        <div class="flex items-center space-x-1">
+                            <input type="radio" id="male" name="gender" value="male" checked class="text-blue-600">
+                            <label for="male" class="cursor-pointer">Male</label>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <input type="radio" id="female" name="gender" value="female" class="text-blue-600">
+                            <label for="female" class="cursor-pointer">Female</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District -->
+                <div>
+                    <label for="district" class="text-base font-medium">
+                        District<span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="district" name="district" class="w-full p-2 border rounded bg-gray-100" value="GANJAM" readonly>
+                </div>
+
+                <!-- Ward -->
+                <div>
+                    <label for="zone" class="text-base font-medium">
+                        Ward <span class="text-red-500">*</span>
+                    </label>
+                    
+<select id="ward" name="ward" class="w-full p-2 border rounded" required>
+    <option value="">Select Ward</option>
+    <option value="Ward 1">Ward 1</option>
+<option value="Ward 2">Ward 2</option>
+<option value="Ward 3">Ward 3</option>
+<option value="Ward 4">Ward 4</option>
+<option value="Ward 5">Ward 5</option>
+<option value="Ward 6">Ward 6</option>
+<option value="Ward 7">Ward 7</option>
+<option value="Ward 8">Ward 8</option>
+<option value="Ward 9">Ward 9</option>
+<option value="Ward 10">Ward 10</option>
+<option value="Ward 11">Ward 11</option>
+<option value="Ward 12">Ward 12</option>
+<option value="Ward 13">Ward 13</option>
+<option value="Ward 14">Ward 14</option>
+<option value="Ward 15">Ward 15</option>
+<option value="Ward 16">Ward 16</option>
+<option value="Ward 17">Ward 17</option>
+<option value="Ward 18">Ward 18</option>
+<option value="Ward 19">Ward 19</option>
+<option value="Ward 20">Ward 20</option>
+<option value="Ward 21">Ward 21</option>
+<option value="Ward 22">Ward 22</option>
+<option value="Ward 23">Ward 23</option>
+<option value="Ward 24">Ward 24</option>
+<option value="Ward 25">Ward 25</option>
+<option value="Ward 26">Ward 26</option>
+<option value="Ward 27">Ward 27</option>
+<option value="Ward 28">Ward 28</option>
+<option value="Ward 29">Ward 29</option>
+<option value="Ward 30">Ward 30</option>
+<option value="Ward 31">Ward 31</option>
+<option value="Ward 32">Ward 32</option>
+<option value="Ward 33">Ward 33</option>
+<option value="Ward 34">Ward 34</option>
+<option value="Ward 35">Ward 35</option>
+<option value="Ward 36">Ward 36</option>
+<option value="Ward 37">Ward 37</option>
+<option value="Ward 38">Ward 38</option>
+<option value="Ward 39">Ward 39</option>
+<option value="Ward 40">Ward 40</option>
+</select>
+
+                </div>
+
+                
+
+                <!-- Village/Locality -->
+                <div>
+                    <label for="village" class="text-base font-medium">
+                        Village/Locality
+                    </label>
+                    <textarea id="village" name="village" class="w-full p-2 border rounded resize-none h-24" placeholder="Enter village or locality details"></textarea>
+                </div>
+
+                <!-- Pin Code -->
+                <div>
+                    <label for="pin-code" class="text-base font-medium">
+                        Pin Code<span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="pin-code" name="pin-code" class="w-full p-2 border rounded" placeholder="Enter 6-digit PIN code" required>
+                </div>
+
+                <!-- Address -->
+                <div>
+                    <label for="address" class="text-base font-medium">
+                        Address<span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="address" name="address" class="w-full p-2 border rounded" placeholder="Enter your complete address" required>
+                </div>
+
+                <!-- Aadhar Card -->
+                <div>
+                    <label for="aadhar-card" class="text-base font-medium">
+                        Aadhar Card <span class="text-red-500">*</span>
+                    </label>
+                    <div class="mt-1">
+                        <input
+                            type="file"
+                            id="aadhar-card"
+                            name="aadhar-card"
+                            class="w-full p-2 border rounded file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:bg-gray-100 hover:file:bg-gray-200"
+                            required
+                        >
+                        <p class="text-xs text-red-500 mt-1">Only .pdf,.doc,.docx,.xls,.xlsx files allowed.</p>
+                    </div>
+                </div>
+
+                <!-- Bank Passbook -->
+                <div>
+                    <label for="bank-passbook" class="text-base font-medium">
+                        Bank Passbook <span class="text-red-500">*</span>
+                    </label>
+                    <div class="mt-1">
+                        <input
+                            type="file"
+                            id="bank-passbook"
+                            name="bank-passbook"
+                            class="w-full p-2 border rounded file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:bg-gray-100 hover:file:bg-gray-200"
+                            required
+                        >
+                        <p class="text-xs text-red-500 mt-1">
+                            Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dealer Name -->
+                <div>
+                    <label for="dealer-name" class="text-base font-medium">
+                        Dealer Name
+                    </label>
+                    <input type="text" id="dealer-name" name="dealer-name" class="w-full p-2 border rounded" placeholder="Enter dealer name if applicable">
+                </div>
+
+                <!-- Dealer Code -->
+                <div>
+                    <label for="dealer-code" class="text-base font-medium">
+                        Dealer Code
+                    </label>
+                    <input type="text" id="dealer-code" name="dealer-code" class="w-full p-2 border rounded" placeholder="Enter dealer code if applicable">
+                </div>
+            </div>
+
+            <!-- Additional Members Section -->
+            <div id="additionalMembers" class="hidden border-t pt-4 mt-4">
+                <h2 class="text-lg font-semibold mb-4">Additional Members to Add</h2>
+                <div id="memberFieldsContainer" class="space-y-4"></div>
+                <button type="button" id="addMoreMembers" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                    + Add Another Member
+                </button>
+            </div>
+
+            <!-- Complaint Description -->
+            <div>
+                <label for="complaint" class="text-base font-medium">
+                    Enter Complaint Description in Brief<span class="text-red-500">*</span>
+                </label>
+                <textarea id="complaint" name="complaint" class="w-full p-2 border rounded min-h-[100px]" placeholder="Describe your grievance in detail" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-start">
+                <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+    <footer class="bg-white py-4 border-t">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-700">Copyright ©2024 MLA Dharmasala</p>
+            <div class="mt-2 flex justify-center items-center">
+                <p class="text-gray-700">Powered By :</p>
+                <span class="text-blue-500 ml-2 font-semibold">Spider Innovation </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show/hide additional members section based on category selection
+        document.querySelectorAll('input[name="category"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const additionalMembersSection = document.getElementById('additionalMembers');
+                if (this.value === 'add-member') {
+                    additionalMembersSection.classList.remove('hidden');
+                    // Add first member field automatically
+                    addMemberField();
+                } else {
+                    additionalMembersSection.classList.add('hidden');
+                    // Clear all member fields
+                    document.getElementById('memberFieldsContainer').innerHTML = '';
+                }
+            });
+        });
+
+        // Function to add new member fields
+        function addMemberField() {
+            const memberCount = document.querySelectorAll('.member-field').length + 1;
+            const memberDiv = document.createElement('div');
+            memberDiv.className = 'member-field p-4 border rounded bg-gray-50';
+            memberDiv.innerHTML = `
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="font-medium">Member ${memberCount}</h3>
+                    <button type="button" class="remove-member text-red-500 hover:text-red-700 text-sm">
+                        Remove
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 mb-1">Full Name</label>
+                        <input type="text" name="member-name[]" class="w-full p-2 border rounded" placeholder="Enter member's full name" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Relation</label>
+                        <input type="text" name="member-relation[]" class="w-full p-2 border rounded" placeholder="Relationship to primary member" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Age</label>
+                        <input type="number" name="member-age[]" class="w-full p-2 border rounded" placeholder="Enter age" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Gender</label>
+                        <select name="member-gender[]" class="w-full p-2 border rounded" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Aadhar Number</label>
+                        <input type="text" name="member-aadhar[]" class="w-full p-2 border rounded" placeholder="Enter 12-digit Aadhar number">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Document Proof</label>
+                        <input type="file" name="member-doc[]" class="w-full p-2 border rounded file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:bg-gray-100 hover:file:bg-gray-200">
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('memberFieldsContainer').appendChild(memberDiv);
+            
+            // Add event listener to the remove button
+            memberDiv.querySelector('.remove-member').addEventListener('click', function() {
+                memberDiv.remove();
+                // Renumber remaining members
+                document.querySelectorAll('.member-field').forEach((field, index) => {
+                    field.querySelector('h3').textContent = `Member ${index + 1}`;
+                });
+            });
+        }
+
+        // Add more members button
+        document.getElementById('addMoreMembers').addEventListener('click', addMemberField);
+    </script>
+</body>
+</html>

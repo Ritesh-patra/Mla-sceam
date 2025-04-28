@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Certificate Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <h1 class="text-2xl font-bold text-center text-indigo-700 mb-6">Income Certificate</h1>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <form action="income-process.php" method="POST" enctype="multipart/form-data">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <!-- Letter No./Date -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Letter No</label>
+                        <input type="text" name="letter_no" class="w-full border border-gray-300 rounded px-3 py-2 bg-gray-100" value="INC306" readonly>
+                    </div>
+
+                    <!-- Full Name -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Full Name *</label>
+                        <input type="text" name="full_name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+
+                    <!-- Father Name -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Father Name *</label>
+                        <input type="text" name="father_name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+
+                    <!-- Mother Name -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Mother Name *</label>
+                        <input type="text" name="mother_name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email *</label>
+                        <input type="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Mobile *</label>
+                        <input type="tel" name="mobile" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Gender</label>
+                        <div class="flex items-center space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="gender" value="Male" class="form-radio text-indigo-600" checked>
+                                <span class="ml-2">Male</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="gender" value="Female" class="form-radio text-indigo-600">
+                                <span class="ml-2">Female</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- District -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">District *</label>
+                        <input type="text" name="district" class="w-full border border-gray-300 rounded px-3 py-2 bg-gray-100" value="GANJAM" readonly>
+                    </div>
+
+                    <!-- Ward -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Ward *</label>
+                        <select id="ward" name="ward" class="w-full p-2 border rounded" required>
+                            <option value="">Select Ward</option>
+                            <option value="Ward 1">Ward 1</option>
+                        <option value="Ward 2">Ward 2</option>
+                        <option value="Ward 3">Ward 3</option>
+                        <option value="Ward 4">Ward 4</option>
+                        <option value="Ward 5">Ward 5</option>
+                        <option value="Ward 6">Ward 6</option>
+                        <option value="Ward 7">Ward 7</option>
+                        <option value="Ward 8">Ward 8</option>
+                        <option value="Ward 9">Ward 9</option>
+                        <option value="Ward 10">Ward 10</option>
+                        <option value="Ward 11">Ward 11</option>
+                        <option value="Ward 12">Ward 12</option>
+                        <option value="Ward 13">Ward 13</option>
+                        <option value="Ward 14">Ward 14</option>
+                        <option value="Ward 15">Ward 15</option>
+                        <option value="Ward 16">Ward 16</option>
+                        <option value="Ward 17">Ward 17</option>
+                        <option value="Ward 18">Ward 18</option>
+                        <option value="Ward 19">Ward 19</option>
+                        <option value="Ward 20">Ward 20</option>
+                        <option value="Ward 21">Ward 21</option>
+                        <option value="Ward 22">Ward 22</option>
+                        <option value="Ward 23">Ward 23</option>
+                        <option value="Ward 24">Ward 24</option>
+                        <option value="Ward 25">Ward 25</option>
+                        <option value="Ward 26">Ward 26</option>
+                        <option value="Ward 27">Ward 27</option>
+                        <option value="Ward 28">Ward 28</option>
+                        <option value="Ward 29">Ward 29</option>
+                        <option value="Ward 30">Ward 30</option>
+                        <option value="Ward 31">Ward 31</option>
+                        <option value="Ward 32">Ward 32</option>
+                        <option value="Ward 33">Ward 33</option>
+                        <option value="Ward 34">Ward 34</option>
+                        <option value="Ward 35">Ward 35</option>
+                        <option value="Ward 36">Ward 36</option>
+                        <option value="Ward 37">Ward 37</option>
+                        <option value="Ward 38">Ward 38</option>
+                        <option value="Ward 39">Ward 39</option>
+                        <option value="Ward 40">Ward 40</option>
+                        </select>
+                    </div>
+
+
+                    <!-- Village/Locality -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Village/Locality</label>
+                        <textarea name="village" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="2"></textarea>
+                    </div>
+
+                    <!-- Pin Code -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Pin Code *</label>
+                        <input type="text" name="pin_code" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="col-span-2">
+                        <label class="block text-gray-700 mb-2">Address *</label>
+                        <textarea name="address" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="2" required></textarea>
+                    </div>
+
+                    <!-- Document Uploads -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Aadhar Card *</label>
+                        <input type="file" name="aadhar_card" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                        <p class="text-xs text-red-500 mt-1">Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 mb-2">Passport Photo *</label>
+                        <input type="file" name="passport_photo" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                        <p class="text-xs text-red-500 mt-1">Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 mb-2">Voter Card</label>
+                        <input type="file" name="voter_card" class="w-full border border-gray-300 rounded px-3 py-2">
+                        <p class="text-xs text-red-500 mt-1">Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 mb-2">Ghara Pata *</label>
+                        <input type="file" name="ghara_pata" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                        <p class="text-xs text-red-500 mt-1">Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.</p>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mt-6">
+                    <input type="submit" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                        
+                    </input>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="bg-white py-4 border-t">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-700">Copyright ©2024 MLA Dharmasala</p>
+            <div class="mt-2 flex justify-center items-center">
+                <p class="text-gray-700">Powered By :</p>
+                <span class="text-blue-500 ml-2 font-semibold">Spider Innovation </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
