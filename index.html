@@ -9,10 +9,32 @@
 
     <style>
         .scheme-card {
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .scheme-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .scheme-card:hover .card-icon {
+            transform: scale(1.2);
+        }
+        .profile-image {
+            border: 3px solid white;
+            transition: transform 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
         }
     </style>
     <script>
@@ -20,59 +42,62 @@
             theme: {
                 extend: {
                     colors: {
-                        'header-orange': '#FF8C00',
-                        'header-orange-dark': '#FF7000',
-                        'footer-dark': '#1a1a2e',
+                        'primary': '#4f46e5',
+                        'primary-dark': '#4338ca',
+                        'secondary': '#7c3aed',
+                        'accent': '#f97316',
+                        'dark': '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-   
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-gray-50 min-h-screen flex flex-col font-sans">
     <!-- Header -->
-    <header class="bg-gradient-to-r from-header-orange to-header-orange-dark text-white">
-        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center mb-4 md:mb-0">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-26%20140023-1BqH8GcIpqADOKQyToeK5Hu4WEsrJP.png" alt="Odisha Map Logo" class="h-16 mr-4">
-                <div>
-                    <h1 class="text-2xl font-bold">M L A Dharmasala</h1>
-                    <h2 class="text-xl">Assembly constituency</h2>
-                    <p class="text-sm">Grievance Redressal System</p>
+                <div class="w-full py-1 rounded-full p-2 mr-4">
+                    <img  src="images/image.png" alt="Odisha Map Logo" class="w-48 object-contain">
                 </div>
             </div>
-            <div class="flex items-center">
-                <div class="flex space-x-2">
-                    <div class="bg-white rounded-full p-1 hexagon">
-                        <img src="https://i.pinimg.com/736x/a7/f9/7f/a7f97f716fab818b938f8b9ae8f6944c.jpg" alt="MLA" class="h-12 w-12 rounded-full">
-                    </div>
-                    <div class="bg-white rounded-full p-1 hexagon">
-                        <img src="https://i.pinimg.com/474x/fb/5f/dd/fb5fdd3a1dea8d9664d6fcc147c5b7cb.jpg" alt="Official" class="h-12 w-12 rounded-full">
-                    </div>
-                    <div class="bg-white rounded-full p-1 hexagon">
-                        <img src="https://i.pinimg.com/736x/8d/95/03/8d9503a77e4c21ebf0ced6c252819a0e.jpg" alt="PM" class="h-12 w-12 rounded-full">
-                    </div>
-                    <div class="bg-white rounded-full p-1 hexagon">
-                        <img src="https://i.pinimg.com/736x/ce/11/29/ce11295c9a054ca2edf3a36333103c5b.jpg" alt="BJP Logo" class="h-12 w-12 rounded-full">
-                    </div>
+            <div class="flex items-center space-x-4">
+                <div class="profile-image bg-white rounded-full p-1 shadow-md">
+                    <img src="images/kanil.png" alt="MLA" class="h-12 w-12 rounded-full object-top object-cover">
+                </div>
+                <div class="profile-image bg-white rounded-full p-1 shadow-md">
+                    <img src="images/image copy.png" alt="Official" class="h-12 w-12 rounded-full object-cover">
+                </div>
+                <div class="profile-image bg-white rounded-full p-1 shadow-md">
+                    <img src="https://i.pinimg.com/736x/6d/0e/a3/6d0ea37fd05ccaeb6a806f2969c4c15b.jpg" alt="PM" class="h-12 w-12 rounded-full object-cover">
+                </div>
+                <div class="profile-image bg-white rounded-full p-1 shadow-md">
+                    <img src="https://i.pinimg.com/736x/88/8d/71/888d71a0ce7c4c4940aa4467a2156ea4.jpg" alt="BJP Logo" class="h-12 w-12 rounded-full object-cover">
                 </div>
             </div>
         </div>
         
         <!-- Navigation -->
-        <nav class="bg-header-orange-dark py-2">
+        <nav class="gradient-bg py-3">
             <div class="container mx-auto px-4 flex justify-between items-center">
-                <div class="flex space-x-6">
-                    <a href="index.html" class="text-white hover:text-gray-200">
+                <div class="flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-gray-200 flex items-center space-x-2 font-medium">
                         <i class="fas fa-home"></i>
+                        <span>Home</span>
                     </a>
-                    <a href="https://kanilkumar.in/" class="text-white hover:text-gray-200">About</a>
+                    <a href="https://kanilkumar.in/" class="text-white hover:text-gray-200 flex items-center space-x-2 font-medium">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
                 </div>
                 <div>
-                    <select id="language-selector" class="px-2 py-1 rounded bg-gray-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option class="text-black bg-white" value="english" selected>English</option>
-                        <option class="text-black bg-white" value="odia">ଓଡ଼ିଆ</option>
+                    <select id="language-selector" class="px-3 py-2 rounded-full bg-white text-dark border-none focus:outline-none focus:ring-2 focus:ring-white font-medium text-sm">
+                        <option class="text-dark bg-white" value="english" selected>English</option>
+                        <option class="text-dark bg-white" value="odia">ଓଡ଼ିଆ</option>
                     </select>
                 </div>
             </div>
@@ -80,126 +105,174 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow container mx-auto px-4 py-8">
-        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-bold text-center text-indigo-700 mb-8" id="scheme-title">Scheme</h2>
+    <main class="flex-grow container mx-auto px-4 py-10">
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <div class="flex items-center justify-center mb-10">
+                <div class="h-1 w-12 bg-primary rounded-full mr-4"></div>
+                <h2 class="text-3xl font-bold text-center text-dark" id="scheme-title">Scheme</h2>
+                <div class="h-1 w-12 bg-primary rounded-full ml-4"></div>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <!-- Ration Card -->
-                <a href="RationCard.html" class="bg-emerald-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-id-card text-3xl"></i>
+                <a href="RationCard.html" class="scheme-card bg-white border-2 border-emerald-500 hover:bg-emerald-500 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-id-card card-icon text-emerald-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-emerald-500 group-hover:text-white" data-en="RATION CARD" data-od="ରେସନ କାର୍ଡ">RATION CARD</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="RATION CARD" data-od="ରେସନ କାର୍ଡ">RATION CARD</h3>
                 </a>
                 
                 <!-- Pension -->
-                <a href="pension.html" class="bg-yellow-300 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-user-friends text-3xl"></i>
+                <a href="pension.html" class="scheme-card bg-white border-2 border-yellow-500 hover:bg-yellow-500 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-user-friends card-icon text-yellow-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-yellow-500 group-hover:text-white" data-en="PENSION" data-od="ପେନସନ">PENSION</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="PENSION" data-od="ପେନସନ">PENSION</h3>
                 </a>
                 
                 <!-- Disability Certificate -->
-                <a href="disavility.html" class="bg-orange-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-wheelchair text-3xl"></i>
+                <a href="disavility.html" class="scheme-card bg-white border-2 border-orange-500 hover:bg-orange-500 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-wheelchair card-icon text-orange-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-orange-500 group-hover:text-white" data-en="DISABILITY CERTIFICATE" data-od="ଅକ୍ଷମତା ପ୍ରମାଣପତ୍ର">DISABILITY CERTIFICATE</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="DISABILITY CERTIFICATE" data-od="ଅକ୍ଷମତା ପ୍ରମାଣପତ୍ର">DISABILITY CERTIFICATE</h3>
                 </a>
                 
                 <!-- CM KISAN -->
-                <a href="cmkisan.html" class="bg-yellow-600 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-tractor text-3xl"></i>
+                <a href="cmkisan.html" class="scheme-card bg-white border-2 border-amber-600 hover:bg-amber-600 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-tractor card-icon text-amber-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-600 group-hover:text-white" data-en="CM KISAN" data-od="ସିଏମ କିଶାନ">CM KISAN</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="CM KISAN" data-od="ସିଏମ କିଶାନ">CM KISAN</h3>
                 </a>
                 
                 <!-- PM KISAN -->
-                <a href="pmkisan.html" class="bg-blue-300 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-tractor text-3xl"></i>
+                <a href="pmkisan.html" class="scheme-card bg-white border-2 border-blue-500 hover:bg-blue-500 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-tractor card-icon text-blue-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-500 group-hover:text-white" data-en="PM KISAN" data-od="ପିଏମ କିଶାନ">PM KISAN</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="PM KISAN" data-od="ପିଏମ କିଶାନ">PM KISAN</h3>
                 </a>
                 
                 <!-- BHUMIHINA -->
-                <a href="bhumikhina.html" class="bg-green-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-home text-3xl"></i>
+                <a href="bhumikhina.html" class="scheme-card bg-white border-2 border-green-500 hover:bg-green-500 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-home card-icon text-green-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-500 group-hover:text-white" data-en="BHUMIHINA" data-od="ଭୂମିହୀନ">BHUMIHINA</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="BHUMIHINA" data-od="ଭୂମିହୀନ">BHUMIHINA</h3>
                 </a>
                 
                 <!-- CASTE CERTIFICATE -->
-                <a href="cast.html" class="bg-red-300 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-file-alt text-3xl"></i>
+                <a href="cast.html" class="scheme-card bg-white border-2 border-red-500 hover:bg-red-500 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-file-alt card-icon text-red-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-red-500 group-hover:text-white" data-en="CASTE CERTIFICATE" data-od="ଜାତି ପ୍ରମାଣପତ୍ର">CASTE CERTIFICATE</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="CASTE CERTIFICATE" data-od="ଜାତି ପ୍ରମାଣପତ୍ର">CASTE CERTIFICATE</h3>
                 </a>
                 
                 <!-- INCOME CERTIFICATE -->
-                <a href="income.html" class="bg-blue-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-money-bill-wave text-3xl"></i>
+                <a href="income.html" class="scheme-card bg-white border-2 border-blue-600 hover:bg-blue-600 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-money-bill-wave card-icon text-blue-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600 group-hover:text-white" data-en="INCOME CERTIFICATE" data-od="ଆୟ ପ୍ରମାଣପତ୍ର">INCOME CERTIFICATE</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="INCOME CERTIFICATE" data-od="ଆୟ ପ୍ରମାଣପତ୍ର">INCOME CERTIFICATE</h3>
                 </a>
                 
                 <!-- RESIDENT CERTIFICATE -->
-                <a href="resident.html" class="bg-green-600 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-address-card text-3xl"></i>
+                <a href="resident.html" class="scheme-card bg-white border-2 border-green-600 hover:bg-green-600 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-address-card card-icon text-green-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-600 group-hover:text-white" data-en="RESIDENT CERTIFICATE" data-od="ବାସିନ୍ଦା ପ୍ରମାଣପତ୍ର">RESIDENT CERTIFICATE</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="RESIDENT CERTIFICATE" data-od="ବାସିନ୍ଦା ପ୍ରମାଣପତ୍ର">RESIDENT CERTIFICATE</h3>
                 </a>
                 
                 <!-- TOILET -->
-                <a href="pmtoilet.html" class="bg-gray-400 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-toilet text-3xl"></i>
+                <a href="pmtoilet.html" class="scheme-card bg-white border-2 border-gray-600 hover:bg-gray-600 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-toilet card-icon text-gray-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-600 group-hover:text-white" data-en="TOILET" data-od="ଶୌଚାଳୟ">TOILET</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="TOILET" data-od="ଶୌଚାଳୟ">TOILET</h3>
                 </a>
                 
                 <!-- AYUSHMAN CARD -->
-                <a href="ayushman.html" class="bg-gray-400 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                <div class="bg-yellow-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-home text-3xl"></i>
+                <a href="ayushman.html" class="scheme-card bg-white border-2 border-yellow-500 hover:bg-yellow-500 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-home card-icon text-yellow-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-yellow-500 group-hover:text-white" data-en="AYUSHMAN CARD" data-od="ପିଏମ ଆବାସ ଯୋଜନା">AYUSHMAN CARD</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="AYUSHMAN CARD" data-od="ପିଏମ ଆବାସ ଯୋଜନା">AYUSHMAN CARD</h3>
-                </div>
+                </a>
                 
                 <!-- POLICE STATION -->
-                <a href="police.html" class="bg-gray-500 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-building text-3xl"></i>
+                <a href="police.html" class="scheme-card bg-white border-2 border-gray-700 hover:bg-gray-700 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-building card-icon text-gray-700 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-700 group-hover:text-white" data-en="POLICE STATION" data-od="ପୋଲିସ ଷ୍ଟେସନ">POLICE STATION</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="POLICE STATION" data-od="ପୋଲିସ ଷ୍ଟେସନ">POLICE STATION</h3>
                 </a>
                 
                 <!-- OTHERS -->
-                <div class="bg-gray-600 text-white p-6 rounded-lg shadow-md text-center scheme-card">
-                    <div class="flex justify-center mb-4">
-                        <i class="fas fa-file text-3xl"></i>
+                <div class="scheme-card bg-white border-2 border-purple-600 hover:bg-purple-600 group">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <i class="fas fa-file card-icon text-purple-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-600 group-hover:text-white" data-en="OTHERS" data-od="ଅନ୍ୟାନ୍ୟ">OTHERS</h3>
                     </div>
-                    <h3 class="text-xl font-bold" data-en="OTHERS" data-od="ଅନ୍ୟାନ୍ୟ">OTHERS</h3>
                 </div>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white py-4 border-t">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-700">Copyright ©2024 MLA Dharmasala</p>
-            <div class="mt-2 flex justify-center items-center">
-                <p class="text-gray-700">Powered By :</p>
-                <span class="text-blue-500 ml-2 font-semibold">Spider Innovation </span>
+    <footer class="bg-dark text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-lg font-medium">MLA Dharmasala</p>
+                    <p class="text-sm text-gray-300">Assembly constituency</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <p class="text-sm text-gray-300">Copyright ©2024 MLA Dharmasala</p>
+                    <div class="mt-2 flex items-center">
+                        <p class="text-sm text-gray-300">Powered By:</p>
+                        <span class="text-primary ml-2 font-semibold">Spider Innovation</span>
+                    </div>
+                </div>
+                <div class="mt-4 md:mt-0 flex space-x-4">
+                    <a href="https://www.facebook.com/kanilkumarbam/" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/kanilkumarbjp" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kanilkumarbjp/" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -228,18 +301,6 @@
                 } else if (language === 'odia') {
                     card.textContent = card.getAttribute('data-od');
                 }
-            });
-        });
-        
-        // Add hover effect to scheme cards
-        const cards = document.querySelectorAll('.scheme-card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.classList.add('shadow-lg');
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.classList.remove('shadow-lg');
             });
         });
     </script>
