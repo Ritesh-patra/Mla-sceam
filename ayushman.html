@@ -16,24 +16,11 @@
 </head>
 <body class="bg-white p-2 sm:p-4">
     <div class="container mx-auto max-w-5xl px-2 sm:px-4">
-        <h1 class="text-center text-xl sm:text-2xl font-bold text-[#4052b5] mb-4 sm:mb-6">Ayushman application portal</h1>
+        <h1 class="text-center text-xl sm:text-2xl font-bold text-[#4052b5] mb-4 sm:mb-6">Ayushman Bharat (PMJAY)</h1>
         
         <form action="ayushman.php" method="post" enctype="multipart/form-data" class="space-y-4" id="grievanceForm">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <!-- Category -->
-                <div class="md:col-span-2">
-                    <label class="text-base font-medium">Category</label>
-                    <div class="flex flex-wrap items-center gap-4 mt-1">
-                        <div class="flex items-center space-x-1">
-                            <input type="radio" id="new" name="category" value="new" checked class="text-blue-600">
-                            <label for="new" class="cursor-pointer">New</label>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <input type="radio" id="add-member" name="category" value="add-member" class="text-blue-600">
-                            <label for="add-member" class="cursor-pointer">Add Member</label>
-                        </div>
-                    </div>
-                </div>
+              
 
                 <!-- Letter No./Date -->
                 <div>
@@ -88,13 +75,7 @@
                     </div>
                 </div>
 
-                <!-- District -->
-                <div>
-                    <label for="district" class="text-base font-medium">
-                        District<span class="text-red-500">*</span>
-                    </label>
-                    <input type="text" id="district" name="district" class="w-full p-2 border rounded bg-gray-100 text-sm sm:text-base" value="GANJAM" readonly>
-                </div>
+   
 
                 <!-- Ward -->
                 <div>
@@ -146,13 +127,7 @@
                     </select>
                 </div>
 
-                <!-- Village/Locality -->
-                <div>
-                    <label for="village" class="text-base font-medium">
-                        Village/Locality
-                    </label>
-                    <textarea id="village" name="village" class="w-full p-2 border rounded resize-none h-24 text-sm sm:text-base" placeholder="Enter village or locality details"></textarea>
-                </div>
+        
 
                 <!-- Pin Code -->
                 <div>
@@ -187,40 +162,9 @@
                     </div>
                 </div>
 
-                <!-- Bank Passbook -->
-                <div>
-                    <label for="bank-passbook" class="text-base font-medium">
-                        Bank Passbook <span class="text-red-500">*</span>
-                    </label>
-                    <div class="mt-1">
-                        <input
-                            type="file"
-                            id="bank-passbook"
-                            name="bank-passbook"
-                            class="w-full p-1 sm:p-2 border rounded file:mr-2 sm:file:mr-4 file:py-1 sm:file:py-2 file:px-2 sm:file:px-4 file:rounded file:border-0 file:text-xs sm:file:text-sm file:bg-gray-100 hover:file:bg-gray-200"
-                            required
-                        >
-                        <p class="text-xs text-red-500 mt-1">
-                            Only .pdf,.doc,.docx,.xls,.xlsx and max size 2 MB files allowed.
-                        </p>
-                    </div>
-                </div>
+            
 
-                <!-- Dealer Name -->
-                <div>
-                    <label for="dealer-name" class="text-base font-medium">
-                        Dealer Name
-                    </label>
-                    <input type="text" id="dealer-name" name="dealer-name" class="w-full p-2 border rounded text-sm sm:text-base" placeholder="Enter dealer name if applicable">
-                </div>
-
-                <!-- Dealer Code -->
-                <div>
-                    <label for="dealer-code" class="text-base font-medium">
-                        Dealer Code
-                    </label>
-                    <input type="text" id="dealer-code" name="dealer-code" class="w-full p-2 border rounded text-sm sm:text-base" placeholder="Enter dealer code if applicable">
-                </div>
+         
             </div>
 
             <!-- Additional Members Section -->
@@ -267,65 +211,7 @@
             });
         });
 
-        // Function to add new member fields
-        function addMemberField() {
-            const memberCount = document.querySelectorAll('.member-field').length + 1;
-            const memberDiv = document.createElement('div');
-            memberDiv.className = 'member-field p-3 sm:p-4 border rounded bg-gray-50';
-            memberDiv.innerHTML = `
-                <div class="flex justify-between items-center mb-2 sm:mb-3">
-                    <h3 class="font-medium text-sm sm:text-base">Member ${memberCount}</h3>
-                    <button type="button" class="remove-member text-red-500 hover:text-red-700 text-xs sm:text-sm">
-                        Remove
-                    </button>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
-                    <div>
-                        <label class="block text-gray-700 mb-1 text-sm sm:text-base">Full Name</label>
-                        <input type="text" name="member-name[]" class="w-full p-1 sm:p-2 border rounded text-sm sm:text-base" placeholder="Member's full name" required>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1 text-sm sm:text-base">Relation</label>
-                        <input type="text" name="member-relation[]" class="w-full p-1 sm:p-2 border rounded text-sm sm:text-base" placeholder="Relationship" required>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1 text-sm sm:text-base">Age</label>
-                        <input type="number" name="member-age[]" class="w-full p-1 sm:p-2 border rounded text-sm sm:text-base" placeholder="Enter age" required>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1 text-sm sm:text-base">Gender</label>
-                        <select name="member-gender[]" class="w-full p-1 sm:p-2 border rounded text-sm sm:text-base" required>
-                            <option value="">Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1 text-sm sm:text-base">Aadhar Number</label>
-                        <input type="text" name="member-aadhar[]" class="w-full p-1 sm:p-2 border rounded text-sm sm:text-base" placeholder="12-digit Aadhar">
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1 text-sm sm:text-base">Document Proof</label>
-                        <input type="file" name="member-doc[]" class="w-full p-1 sm:p-2 border rounded file:mr-2 sm:file:mr-4 file:py-1 sm:file:py-2 file:px-2 sm:file:px-4 file:rounded file:border-0 file:text-xs sm:file:text-sm file:bg-gray-100 hover:file:bg-gray-200">
-                    </div>
-                </div>
-            `;
-            
-            document.getElementById('memberFieldsContainer').appendChild(memberDiv);
-            
-            // Add event listener to the remove button
-            memberDiv.querySelector('.remove-member').addEventListener('click', function() {
-                memberDiv.remove();
-                // Renumber remaining members
-                document.querySelectorAll('.member-field').forEach((field, index) => {
-                    field.querySelector('h3').textContent = `Member ${index + 1}`;
-                });
-            });
-        }
 
-        // Add more members button
-        document.getElementById('addMoreMembers').addEventListener('click', addMemberField);
     </script>
 </body>
 </html>
