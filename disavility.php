@@ -46,29 +46,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'patrasagarika654@gmail.com'; // Your Email
-        $mail->Password   = 'dqnk duhw jwxz uydo';         // Your App Password
+        $mail->Username   = 'kanilkumarbjp@gmail.com'; // Your Email
+        $mail->Password   = 'mhha amzy hwsi rdxy';         // Your App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->CharSet    = 'UTF-8';
 
         // Set sender and receiver
-        $mail->setFrom('patrasagarika654@gmail.com', 'Disability Certificate Form');
-        $mail->addAddress('patrasagarika654@gmail.com', 'Admin');
+        $mail->setFrom('kanilkumarbjp@gmail.com', 'Disability Certificate Form');
+        $mail->addAddress('kanilkumarbjp@gmail.com', 'Admin');
         $mail->addReplyTo($_POST['email'], $_POST['fullName']);
 
         // Email subject
-        $letterNo = htmlspecialchars($_POST['letterNo'] ?? 'N/A');
+        $letterNo = htmlspecialchars($_POST['letterNo'] ?? 'disavility application');
         $mail->isHTML(true);
-        $mail->Subject = "New Disability Certificate Application - $letterNo";
+        $mail->Subject = "New Disability Certificate Application ";
 
         // Email body
         $emailBody = '<h2 style="color:#4052b5;">Applicant Details</h2>';
         $emailBody .= '<table style="width:100%; border-collapse:collapse;">';
 
         $fields = [
-            'Letter No./Date' => $letterNo,
-            'Full Name' => htmlspecialchars($_POST['fullName']),
+      
+            'Full Name' => htmlspecialchars(string: $_POST['fullName']),
             "Father's Name" => htmlspecialchars($_POST['fatherName']),
             'Email' => htmlspecialchars($_POST['email']),
             'Mobile' => htmlspecialchars($_POST['mobile']),

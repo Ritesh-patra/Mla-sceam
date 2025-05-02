@@ -1,175 +1,129 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
+// Import PHPMailer classes manually (without using Composer)
 require 'mailer/Exception.php';
 require 'mailer/PHPMailer.php';
 require 'mailer/SMTP.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Initialize response array
-    $response = ['success' => false, 'message' => ''];
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Initialize error array
+    $errors = [];
     
-    try {
-        // Validate required fields
-        $requiredFields = [
-            'category', 'full-name', 'father-name', 'email', 
-            'mobile', 'address', 'pin-code', 'complaint'
-        ];
-        
-        foreach ($requiredFields as $field) {
-            if (empty($_POST[$field])) {
-                throw new Exception("Please fill all required fields");
-            }
+    // Validate required fields
+    $required_fields = ['full-name', 'father-name', 'mobile', 'ward', 'pin-code', 'address', 'complaint'];
+    foreach ($required_fields as $field) {
+        if (empty($_POST[$field])) {
+            $errors[] = ucfirst(str_replace('-', ' ', $field)) . " is required";
         }
-
-        // Validate email
-        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            throw new Exception("Invalid email address");
-        }
-
-        // Validate mobile number (Indian format)
-        if (!preg_match('/^[6-9]\d{9}$/', $_POST['mobile'])) {
-            throw new Exception("Invalid mobile number");
-        }
-
-        // Validate PIN code (Indian format)
-        if (!preg_match('/^\d{6}$/', $_POST['pin-code'])) {
-            throw new Exception("Invalid PIN code");
-        }
-
-        // Initialize PHPMailer
-        $mail = new PHPMailer(true);
-
-        // SMTP Configuration
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'patrasagarika654@gmail.com';
-        $mail->Password = 'dqnk duhw jwxz uydo';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
-        $mail->CharSet = 'UTF-8';
-
-        // Recipients
-        $mail->setFrom('patrasagarika654@gmail.com', 'Grievance Redressal System');
-        $mail->addAddress('patrasagarika654@gmail.com', 'Admin');
-        $mail->addReplyTo($_POST['email'], $_POST['full-name']);
-
-        // Email content
-        $mail->isHTML(true);
-        $mail->Subject = 'New Grievance Submission - ' . $_POST['category'];
-
-        // Build email body
-        $emailBody = '<h2 style="color:#4052b5;">Grievance Details</h2>';
-        $emailBody .= '<table style="width:100%; border-collapse:collapse;">';
-        
-        // Add form fields to email
-        $fields = [
-            'Letter No./Date' => $_POST['letter-no'] ?? 'N/A',
-            'Category' => $_POST['category'],
-            'Full Name' => htmlspecialchars($_POST['full-name']),
-            "Father's Name" => htmlspecialchars($_POST['father-name']),
-            'Email' => htmlspecialchars($_POST['email']),
-            'Mobile' => htmlspecialchars($_POST['mobile']),
-            'Gender' => $_POST['gender'] ?? 'Not specified',
-            'District' => $_POST['district'] ?? 'GANJAM',
-            'Ward' => $_POST['zone'] ?? 'Not specified',
-            'Village/Locality' => htmlspecialchars($_POST['village'] ?? 'Not specified'),
-            'PIN Code' => htmlspecialchars($_POST['pin-code']),
-            'Address' => htmlspecialchars($_POST['address']),
-            'Dealer Name' => htmlspecialchars($_POST['dealer-name'] ?? 'Not specified'),
-            'Dealer Code' => htmlspecialchars($_POST['dealer-code'] ?? 'Not specified'),
-            'Complaint' => nl2br(htmlspecialchars($_POST['complaint']))
-        ];
-        
-        foreach ($fields as $label => $value) {
-            $emailBody .= '<tr><td style="padding:8px;border:1px solid #ddd;width:30%;"><strong>' . $label . '</strong></td>';
-            $emailBody .= '<td style="padding:8px;border:1px solid #ddd;">' . $value . '</td></tr>';
-        }
-        
-        // Add member details if applicable
-        if ($_POST['category'] === 'add-member' && isset($_POST['member-name'])) {
-            $emailBody .= '<tr><td colspan="2" style="padding:8px;border:1px solid #ddd;background:#f5f5f5;">';
-            $emailBody .= '<h3 style="margin:0;">Additional Members</h3></td></tr>';
-            
-            foreach ($_POST['member-name'] as $index => $name) {
-                $emailBody .= '<tr><td colspan="2" style="padding:8px;border:1px solid #ddd;background:#f9f9f9;">';
-                $emailBody .= '<strong>Member ' . ($index + 1) . '</strong></td></tr>';
-                
-                $memberFields = [
-                    'Name' => htmlspecialchars($name),
-                    'Relation' => htmlspecialchars($_POST['member-relation'][$index]),
-                    'Age' => htmlspecialchars($_POST['member-age'][$index]),
-                    'Gender' => htmlspecialchars($_POST['member-gender'][$index]),
-                    'Aadhar Number' => htmlspecialchars($_POST['member-aadhar'][$index] ?? 'Not provided')
-                ];
-                
-                foreach ($memberFields as $mLabel => $mValue) {
-                    $emailBody .= '<tr><td style="padding:8px;border:1px solid #ddd;padding-left:30px;">' . $mLabel . '</td>';
-                    $emailBody .= '<td style="padding:8px;border:1px solid #ddd;">' . $mValue . '</td></tr>';
-                }
-            }
-        }
-        
-        $emailBody .= '</table>';
-        $mail->Body = $emailBody;
-        $mail->AltBody = strip_tags(str_replace('<br />', "\n", $emailBody));
-
-        // Handle file attachments
-        $allowedExtensions = ['pdf', 'doc', 'docx', 'xls', 'xlsx', 'jpg', 'png'];
-        $maxFileSize = 2 * 1024 * 1024; // 2MB
-        
-        // Process Aadhar Card upload
-        if (isset($_FILES['aadhar-card']) && $_FILES['aadhar-card']['error'] === UPLOAD_ERR_OK) {
-            $fileExt = strtolower(pathinfo($_FILES['aadhar-card']['name'], PATHINFO_EXTENSION));
-            if (!in_array($fileExt, $allowedExtensions)) {
-                throw new Exception("Invalid file type for Aadhar Card. Only PDF, DOC, DOCX, XLS, XLSX allowed.");
-            }
-            if ($_FILES['aadhar-card']['size'] > $maxFileSize) {
-                throw new Exception("Aadhar Card file is too large. Max 2MB allowed.");
-            }
-            $mail->addAttachment(
-                $_FILES['aadhar-card']['tmp_name'],
-                'Aadhar_' . $_POST['full-name'] . '.' . $fileExt
-            );
-        }
-        
-        // Process Bank Passbook upload
-        if (isset($_FILES['bank-passbook']) && $_FILES['bank-passbook']['error'] === UPLOAD_ERR_OK) {
-            $fileExt = strtolower(pathinfo($_FILES['bank-passbook']['name'], PATHINFO_EXTENSION));
-            if (!in_array($fileExt, $allowedExtensions)) {
-                throw new Exception("Invalid file type for Bank Passbook. Only PDF, DOC, DOCX, XLS, XLSX allowed.");
-            }
-            if ($_FILES['bank-passbook']['size'] > $maxFileSize) {
-                throw new Exception("Bank Passbook file is too large. Max 2MB allowed.");
-            }
-            $mail->addAttachment(
-                $_FILES['bank-passbook']['tmp_name'],
-                'BankPassbook_' . $_POST['full-name'] . '.' . $fileExt
-            );
-        }
-
-        // Send email
-        $mail->send();
-        
-        // Success response
-        $response['success'] = true;
-        $response['message'] = 'Your grievance has been submitted successfully. We will contact you soon.';
-        
-    } catch (Exception $e) {
-        $response['message'] = 'Error: ' . $e->getMessage();
     }
     
-    // Display response message
-    echo "<script>
-        alert('".addslashes($response['message'])."');
-        window.location.href = 'RationCard.html';
-    </script>";
+    // Validate email format if provided
+    if (!empty($_POST['email']) && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email format";
+    }
+    
+    // Validate mobile number (10 digits)
+    if (!empty($_POST['mobile']) && !preg_match("/^[0-9]{10}$/", $_POST['mobile'])) {
+        $errors[] = "Mobile number must be 10 digits";
+    }
+    
+    // Validate PIN code (6 digits)
+    if (!empty($_POST['pin-code']) && !preg_match("/^[0-9]{6}$/", $_POST['pin-code'])) {
+        $errors[] = "PIN code must be 6 digits";
+    }
+    
+    // If there are no errors, process the form
+    if (empty($errors)) {
+        // Generate a unique reference number
+
+        
+        // Prepare email content
+        $mail = new PHPMailer(true);
+        
+        try {
+            // Server settings
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'kanilkumarbjp@gmail.com';
+            $mail->Password = 'mhha amzy hwsi rdxy';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+            
+            // Recipients
+            $mail->setFrom('kanilkumarbjp@gmail.com', 'Ration Card System');
+            $mail->addAddress('kanilkumarbjp@gmail.com');
+            
+            // Add reply-to with the user's email if provided
+            if (!empty($_POST['email'])) {
+                $mail->addReplyTo($_POST['email'], $_POST['full-name']);
+            }
+            
+            // Content
+            $mail->isHTML(true);
+            $mail->Subject = 'Ration Card Application: ' . $reference_number;
+            
+            // Build email body
+            $body = '<h2>Ration Card Application Details</h2>';
+            $body .= '<p><strong>Reference Number:</strong> ' . $reference_number . '</p>';
+            $body .= '<p><strong>Full Name:</strong> ' . htmlspecialchars($_POST['full-name']) . '</p>';
+            $body .= '<p><strong>Father Name:</strong> ' . htmlspecialchars($_POST['father-name']) . '</p>';
+            
+            if (!empty($_POST['email'])) {
+                $body .= '<p><strong>Email:</strong> ' . htmlspecialchars($_POST['email']) . '</p>';
+            } else {
+                $body .= '<p><strong>Email:</strong> Not provided</p>';
+            }
+            
+            $body .= '<p><strong>Mobile:</strong> ' . htmlspecialchars($_POST['mobile']) . '</p>';
+            $body .= '<p><strong>Gender:</strong> ' . htmlspecialchars($_POST['gender'] ?? 'Not specified') . '</p>';
+            $body .= '<p><strong>Ward:</strong> ' . htmlspecialchars($_POST['ward']) . '</p>';
+            $body .= '<p><strong>Pin Code:</strong> ' . htmlspecialchars($_POST['pin-code']) . '</p>';
+            $body .= '<p><strong>Address:</strong> ' . htmlspecialchars($_POST['address']) . '</p>';
+            $body .= '<p><strong>Complaint Description:</strong> ' . nl2br(htmlspecialchars($_POST['complaint'])) . '</p>';
+            
+            $mail->Body = $body;
+            $mail->AltBody = strip_tags($body);
+            
+            // Send email
+            $mail->send();
+            
+            // Display success message
+            echo '<div style="max-width: 800px; margin: 50px auto; padding: 20px; background-color: #f0f8ff; border-radius: 10px; text-align: center;">';
+            echo '<h2 style="color: #4052b5;">Application Submitted Successfully!</h2>';
+            echo '<p>Your Ration Card application has been submitted successfully.</p>';
+            echo '<p>Your reference number is: <strong>' . htmlspecialchars($reference_number) . '</strong></p>';
+            echo '<p>Please keep this reference number for future correspondence.</p>';
+            echo '<p>We will contact you soon at your provided mobile number.</p>';
+            echo '<a href="index.html" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #4052b5; color: white; text-decoration: none; border-radius: 5px;">Back to Home</a>';
+            echo '</div>';
+            
+            exit;
+            
+        } catch (Exception $e) {
+            $errors[] = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    }
+    
+    // If there are errors, display them
+    if (!empty($errors)) {
+        echo '<div style="max-width: 800px; margin: 50px auto; padding: 20px; background-color: #fff0f0; border-radius: 10px;">';
+        echo '<h2 style="color: #e53e3e;">Error Submitting Form</h2>';
+        echo '<ul style="color: #e53e3e;">';
+        foreach ($errors as $error) {
+            echo '<li>' . htmlspecialchars($error) . '</li>';
+        }
+        echo '</ul>';
+        echo '<a href="javascript:history.back()" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #4052b5; color: white; text-decoration: none; border-radius: 5px;">Go Back</a>';
+        echo '</div>';
+        exit;
+    }
+} else {
+    // If the form was not submitted, redirect to the form page
+    header("Location: index.html");
     exit;
 }
-
-// If not a POST request, redirect to form
-header('Location: RationCard.html');
-exit;
 ?>

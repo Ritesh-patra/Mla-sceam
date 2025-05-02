@@ -45,15 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'patrasagarika654@gmail.com';
-        $mail->Password = 'dqnk duhw jwxz uydo';
+        $mail->Username = 'kanilkumarbjp@gmail.com';
+        $mail->Password = 'mhha amzy hwsi rdxy';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         $mail->CharSet = 'UTF-8';
 
         // Recipients
-        $mail->setFrom('patrasagarika654@gmail.com', 'Grievance Redressal System');
-        $mail->addAddress('patrasagarika654@gmail.com', 'Admin');
+        $mail->setFrom('kanilkumarbjp@gmail.com', 'Grievance Redressal System');
+        $mail->addAddress('kanilkumarbjp@gmail.com', 'Admin');
         $mail->addReplyTo($_POST['email'], $_POST['full_name']);
 
         // Email content
