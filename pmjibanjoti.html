@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Assistance Scheme | CFL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#047857',
+                        accent: '#f59e0b',
+                        light: '#f0fdf4'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .wave-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23047857' fill-opacity='0.2' d='M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,208C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-primary to-secondary text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="flex items-center justify-center bg-white rounded-full h-12 w-12 mr-3">
+                        <span class="text-primary font-bold text-xl">JJ</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">Financial Assistance Scheme</h1>
+                        <p class="text-sm text-white/80">Centre for Financial Literacy (CFL)</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#about" class="px-4 py-2 hover:bg-white/20 rounded-lg transition">About</a>
+                    <a href="#benefits" class="px-4 py-2 hover:bg-white/20 rounded-lg transition">Benefits</a>
+                    <a href="#apply" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-amber-600 transition">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 px-4 bg-gradient-to-b from-light to-white relative overflow-hidden">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Financial Support for Your Family</h2>
+                    <p class="text-lg text-gray-600 mb-8">Access loans up to ₹2,00,000 with affordable monthly payments of just ₹436</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#apply" class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full text-center">Apply Now</a>
+                        <a href="#eligibility" class="border-2 border-primary text-primary hover:bg-primary/10 font-bold py-3 px-8 rounded-full text-center">Check Eligibility</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="bg-gradient-to-b from-yellow-300 to-green-300 rounded-full h-80 w-80 flex items-center justify-center p-6">
+                            <div class="relative">
+                                <!-- Family icon -->
+                                <svg class="h-48 w-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Adult 1 -->
+                                    <circle cx="80" cy="60" r="20" fill="#1e40af"/>
+                                    <rect x="70" y="80" width="20" height="50" fill="#1e40af"/>
+                                    <rect x="60" y="90" width="10" height="30" fill="#1e40af" transform="rotate(20, 60, 90)"/>
+                                    <rect x="90" y="90" width="10" height="30" fill="#1e40af" transform="rotate(-20, 90, 90)"/>
+                                    <rect x="70" y="130" width="10" height="30" fill="#1e40af"/>
+                                    <rect x="80" y="130" width="10" height="30" fill="#1e40af"/>
+                                    
+                                    <!-- Adult 2 -->
+                                    <circle cx="40" cy="70" r="20" fill="#000"/>
+                                    <path d="M20,90 L60,90 L50,130 L30,130 Z" fill="#000"/>
+                                    <rect x="30" y="130" width="10" height="30" fill="#000"/>
+                                    <rect x="40" y="130" width="10" height="30" fill="#000"/>
+                                    
+                                    <!-- Child -->
+                                    <circle cx="120" cy="90" r="15" fill="#d946ef"/>
+                                    <rect x="115" y="105" width="10" height="30" fill="#d946ef"/>
+                                    <rect x="105" y="115" width="10" height="20" fill="#d946ef" transform="rotate(20, 105, 115)"/>
+                                    <rect x="125" y="115" width="10" height="20" fill="#d946ef" transform="rotate(-20, 125, 115)"/>
+                                    <rect x="115" y="135" width="5" height="20" fill="#d946ef"/>
+                                    <rect x="120" y="135" width="5" height="20" fill="#d946ef"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 right-0 bg-black text-white px-6 py-3 rounded-lg shadow-lg">
+                            <p class="font-bold">₹2,00,000/-</p>
+                            <p class="text-sm">Maximum Loan</p>
+                        </div>
+                        <div class="absolute -bottom-4 left-0 bg-primary text-white px-6 py-3 rounded-lg shadow-lg">
+                            <p class="font-bold">₹436/-</p>
+                            <p class="text-sm">Monthly Payment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 wave-bg"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">About the Scheme</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A financial assistance program designed to support families with affordable loans and financial literacy</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-primary">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 rounded-full p-4 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Financial Support</h3>
+                            <p class="text-gray-600">Access loans up to ₹2,00,000 with affordable monthly payments to support your family's needs and aspirations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-secondary">
+                    <div class="flex items-start">
+                        <div class="bg-secondary/10 rounded-full p-4 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Secure & Reliable</h3>
+                            <p class="text-gray-600">Backed by Union Bank of India and NABARD, ensuring a trustworthy and secure financial assistance program.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-accent">
+                    <div class="flex items-start">
+                        <div class="bg-accent/10 rounded-full p-4 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Financial Literacy</h3>
+                            <p class="text-gray-600">Gain knowledge about managing finances, savings, and investments through our financial literacy programs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-600">
+                    <div class="flex items-start">
+                        <div class="bg-purple-600/10 rounded-full p-4 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Family Support</h3>
+                            <p class="text-gray-600">Designed to support the entire family with financial solutions that help improve quality of life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+<section id="benefits" class="py-16 px-4 bg-gray-50">
+  <div class="container mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Key Benefits</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Understand the advantages of the PM Jeevan Jyoti Bima Yojana and how it ensures your family’s financial security.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Benefit 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-primary h-2"></div>
+        <div class="p-8">
+          <div class="bg-primary/10 rounded-full h-16 w-16 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-2xl font-bold text-primary">1</span>
+          </div>
+          <h3 class="text-xl font-semibold text-center mb-4">Affordable Premium</h3>
+          <p class="text-gray-600 text-center">Only ₹436 per year ensures life cover of ₹2 lakh — making it accessible for all.</p>
+        </div>
+      </div>
+
+      <!-- Benefit 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-secondary h-2"></div>
+        <div class="p-8">
+          <div class="bg-secondary/10 rounded-full h-16 w-16 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-2xl font-bold text-secondary">2</span>
+          </div>
+          <h3 class="text-xl font-semibold text-center mb-4">Easy Enrollment</h3>
+          <p class="text-gray-600 text-center">Quick registration via your savings bank account with auto-debit facility.</p>
+        </div>
+      </div>
+
+      <!-- Benefit 3 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-accent h-2"></div>
+        <div class="p-8">
+          <div class="bg-accent/10 rounded-full h-16 w-16 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-2xl font-bold text-accent">3</span>
+          </div>
+          <h3 class="text-xl font-semibold text-center mb-4">Government Backed</h3>
+          <p class="text-gray-600 text-center">Secure and trusted, the scheme is backed by the Government of India.</p>
+        </div>
+      </div>
+
+      <!-- Benefit 4 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-purple-600 h-2"></div>
+        <div class="p-8">
+          <div class="bg-purple-600/10 rounded-full h-16 w-16 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-2xl font-bold text-purple-600">4</span>
+          </div>
+          <h3 class="text-xl font-semibold text-center mb-4">Financial Protection</h3>
+          <p class="text-gray-600 text-center">Provides financial aid to the nominee in case of policyholder’s death.</p>
+        </div>
+      </div>
+
+      <!-- Benefit 5 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-pink-600 h-2"></div>
+        <div class="p-8">
+          <div class="bg-pink-600/10 rounded-full h-16 w-16 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-2xl font-bold text-pink-600">5</span>
+          </div>
+          <h3 class="text-xl font-semibold text-center mb-4">Hassle-Free Claims</h3>
+          <p class="text-gray-600 text-center">Simple claim process with minimal documentation through the bank.</p>
+        </div>
+      </div>
+
+      <!-- Benefit 6 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-indigo-600 h-2"></div>
+        <div class="p-8">
+          <div class="bg-indigo-600/10 rounded-full h-16 w-16 flex items-center justify-center mb-6 mx-auto">
+            <span class="text-2xl font-bold text-indigo-600">6</span>
+          </div>
+          <h3 class="text-xl font-semibold text-center mb-4">Annual Renewal</h3>
+          <p class="text-gray-600 text-center">Continued coverage through yearly auto-renewal from your account.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary">
+      <div class="flex items-center mb-4">
+        <div class="bg-primary/10 rounded-full p-3 mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800">Important Note</h3>
+      </div>
+      <p class="text-gray-600">Ensure your bank account is active and Aadhaar is linked. The scheme provides peace of mind by supporting families financially in difficult times.</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Eligibility Section -->
+<section id="eligibility" class="py-16 px-4">
+  <div class="container mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Eligibility Criteria</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Check if you're eligible to enroll in the PM Jeevan Jyoti Bima Yojana (PMJJBY)</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+      <div class="bg-gradient-to-r from-primary to-secondary text-white p-6">
+        <h3 class="text-xl font-semibold">Who Can Apply?</h3>
+      </div>
+      <div class="p-8">
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-green-500 mr-3 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Indian citizens aged between 18 and 50 years</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-green-500 mr-3 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Must have an active savings bank account</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-green-500 mr-3 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Aadhaar must be linked with the bank account</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-green-500 mr-3 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Consent to auto-debit of premium from the account</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-accent text-white p-6">
+          <h3 class="text-xl font-semibold">Required Documents</h3>
+        </div>
+        <div class="p-8">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-accent mr-3 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span class="text-gray-700">Identity Proof (Aadhaar Card mandatory)</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-accent mr-3 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span class="text-gray-700">Bank passbook or statement (for verification)</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-accent mr-3 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span class="text-gray-700">Nominee details with ID proof (for claims)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-secondary text-white p-6">
+          <h3 class="text-xl font-semibold">Policy Details</h3>
+        </div>
+        <div class="p-8 space-y-6">
+          <div>
+            <h4 class="font-semibold text-gray-800 mb-2">Coverage Amount</h4>
+            <p class="text-gray-700">₹2,00,000 (paid to nominee on policyholder’s death)</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800 mb-2">Annual Premium</h4>
+            <p class="text-gray-700">₹436 (auto-debited from the linked bank account)</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800 mb-2">Policy Term</h4>
+            <p class="text-gray-700">1 year (renewable annually until age 55)</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800 mb-2">Enrollment Period</h4>
+            <p class="text-gray-700">Available anytime through the bank or online platforms</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Application Form Section -->
+    <section id="apply" class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Apply Now</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Fill out the form below to apply for financial assistance</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-primary to-secondary text-white p-6">
+                    <h3 class="text-xl font-semibold">Application Form</h3>
+                    <p class="text-sm text-white/80">All fields marked with * are required</p>
+                </div>
+                <div class="p-8">
+                    <form id="application-form">
+                        <!-- Personal Information -->
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                                <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 text-sm">1</span>
+                                Personal Information
+                            </h4>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="full-name">Full Name *</label>
+                                    <input type="text" id="full-name" name="full-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="date-of-birth">Date of Birth *</label>
+                                    <input type="date" id="date-of-birth" name="date-of-birth" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="mobile">Mobile Number *</label>
+                                    <input type="tel" id="mobile" name="mobile" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="address">Full Address *</label>
+                                    <textarea id="address" name="address" rows="3" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Financial Information -->
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                                <span class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 text-sm">2</span>
+                                Financial Information
+                            </h4>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="occupation">Occupation *</label>
+                                    <select id="occupation" name="occupation" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                        <option value="">Select Occupation</option>
+                                        <option value="salaried">Salaried Employee</option>
+                                        <option value="business">Business Owner</option>
+                                        <option value="self-employed">Self-Employed Professional</option>
+                                        <option value="farmer">Farmer</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="monthly-income">Monthly Income (₹) *</label>
+                                    <input type="number" id="monthly-income" name="monthly-income" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="loan-amount">Loan Amount Required (₹) *</label>
+                                    <input type="number" id="loan-amount" name="loan-amount" required max="300000" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="loan-purpose">Purpose of Loan *</label>
+                                    <select id="loan-purpose" name="loan-purpose" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                        <option value="">Select Purpose</option>
+                                        <option value="education">Education</option>
+                                        <option value="business">Business Expansion</option>
+                                        <option value="home-improvement">Home Improvement</option>
+                                        <option value="medical">Medical Expenses</option>
+                                        <option value="debt-consolidation">Debt Consolidation</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="bank-name">Bank Name *</label>
+                                    <input type="text" id="bank-name" name="bank-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="account-number">Account Number *</label>
+                                    <input type="text" id="account-number" name="account-number" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Upload -->
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                                <span class="bg-accent text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 text-sm">3</span>
+                                Document Upload
+                            </h4>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="id-proof">ID Proof (Aadhaar/PAN/Voter ID) *</label>
+                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                        <input type="file" id="id-proof" name="id-proof" class="hidden" required accept=".jpg,.jpeg,.png,.pdf">
+                                        <label for="id-proof" class="cursor-pointer block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                            </svg>
+                                            <span class="mt-2 block text-sm text-gray-600">Click to upload or drag and drop</span>
+                                            <span class="text-xs text-gray-500">PDF, JPG, PNG (Max 2MB)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="address-proof">Address Proof *</label>
+                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                        <input type="file" id="address-proof" name="address-proof" class="hidden" required accept=".jpg,.jpeg,.png,.pdf">
+                                        <label for="address-proof" class="cursor-pointer block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                            </svg>
+                                            <span class="mt-2 block text-sm text-gray-600">Click to upload or drag and drop</span>
+                                            <span class="text-xs text-gray-500">PDF, JPG, PNG (Max 2MB)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="income-proof">Income Proof *</label>
+                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                        <input type="file" id="income-proof" name="income-proof" class="hidden" required accept=".jpg,.jpeg,.png,.pdf">
+                                        <label for="income-proof" class="cursor-pointer block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                            </svg>
+                                            <span class="mt-2 block text-sm text-gray-600">Click to upload or drag and drop</span>
+                                            <span class="text-xs text-gray-500">PDF, JPG, PNG (Max 2MB)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="bank-statement">Bank Statement *</label>
+                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                        <input type="file" id="bank-statement" name="bank-statement" class="hidden" required accept=".jpg,.jpeg,.png,.pdf">
+                                        <label for="bank-statement" class="cursor-pointer block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                            </svg>
+                                            <span class="mt-2 block text-sm text-gray-600">Click to upload or drag and drop</span>
+                                            <span class="text-xs text-gray-500">PDF, JPG, PNG (Max 2MB)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="photograph">Passport Size Photograph *</label>
+                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                        <input type="file" id="photograph" name="photograph" class="hidden" required accept=".jpg,.jpeg,.png">
+                                        <label for="photograph" class="cursor-pointer block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                            </svg>
+                                            <span class="mt-2 block text-sm text-gray-600">Click to upload or drag and drop</span>
+                                            <span class="text-xs text-gray-500">JPG, PNG (Max 1MB)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Terms and Submit -->
+                        <div class="mt-8">
+                            <div class="mb-6">
+                                <label class="flex items-center">
+                                    <input type="checkbox" required class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">I confirm that all information provided is accurate and complete. I authorize Centre for Financial Literacy to verify the information provided. *</span>
+                                </label>
+                            </div>
+                            <div class="mb-6">
+                                <label class="flex items-center">
+                                    <input type="checkbox" required class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">I have read and agree to the <a href="#" class="text-primary hover:underline">terms and conditions</a> and <a href="#" class="text-primary hover:underline">privacy policy</a>. *</span>
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:scale-105">
+                                    Submit Application
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- PMJJBY Section -->
+
+
+
+
+<!-- PMJJBY Detailed Section -->
+<section id="pmjjby-info" class="py-16 px-4 bg-white">
+  <div class="container mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">A government-backed life insurance scheme aimed at providing financial security to families in case of the policyholder’s death.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-primary">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Key Features</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+          <li>Life insurance cover of ₹2,00,000 in case of policyholder's death.</li>
+          <li>Annual premium of only ₹436.</li>
+          <li>Coverage valid for one year and renewable every year.</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-secondary">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Eligibility Criteria</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+          <li>Any Indian citizen aged between 18 and 50 years.</li>
+          <li>Must have a savings bank account.</li>
+          <li>Aadhaar card must be linked with the bank account.</li>
+          <li>Premium is auto-debited from the bank account annually.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-1 gap-8 mt-12">
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg shadow text-gray-700">
+        <h3 class="text-lg font-semibold mb-2">How to Claim?</h3>
+        <p>In case of the policyholder's death, the nominee should visit the bank branch where the policy was enrolled. They need to submit the death certificate, filled claim form, and identity documents to initiate the claim process. Upon approval, the claim amount of ₹2,00,000 is transferred to the nominee’s bank account.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center justify-center bg-white rounded-full h-10 w-10 mr-3">
+                            <span class="text-primary font-bold text-lg">JJ</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Financial Assistance Scheme</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">A financial literacy and assistance program by Centre for Financial Literacy (CFL), operated by Union Bank of India in collaboration with NABARD.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About</a></li>
+                        <li><a href="#benefits" class="hover:text-white transition">Benefits</a></li>
+                        <li><a href="#eligibility" class="hover:text-white transition">Eligibility</a></li>
+                        <li><a href="#apply" class="hover:text-white transition">Apply Now</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>1800-425-1809 (Toll Free)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>info@cfl.org.in</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Centre for Financial Literacy, Union Bank of India, Regional Office</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Partners</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <img src="https://via.placeholder.com/80x40?text=Union+Bank" alt="Union Bank of India" class="h-10 bg-white rounded p-1">
+                        <img src="https://via.placeholder.com/80x40?text=NABARD" alt="NABARD" class="h-10 bg-white rounded p-1">
+                    </div>
+                    <p class="text-gray-400 text-sm">Operated under Financial Inclusion Fund, NABARD</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Centre for Financial Literacy. All rights reserved.</p>
+                <p class="mt-2 text-sm">Designed and developed for financial inclusion in India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // File upload preview
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', function() {
+                const label = this.nextElementSibling;
+                if (this.files.length > 0) {
+                    const fileName = this.files[0].name;
+                    const span = label.querySelector('span');
+                    if (span) {
+                        span.textContent = `Selected: ${fileName}`;
+                        span.classList.add('text-green-600', 'font-medium');
+                    }
+                    
+                    // Change the SVG color to green
+                    const svg = label.querySelector('svg');
+                    if (svg) {
+                        svg.classList.remove('text-gray-400');
+                        svg.classList.add('text-green-600');
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const formContainer = this.parentElement;
+            formContainer.innerHTML = `
+                <div class="p-8 text-center">
+                    <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Application Submitted Successfully!</h3>
+                    <p class="text-gray-600 mb-6">Your application has been received. Our team will review it and contact you soon.</p>
+                    <p class="text-gray-600 mb-2">Application Reference Number:</p>
+                    <p class="text-xl font-bold text-primary mb-6">${Math.floor(Math.random() * 1000000).toString().padStart(6, '0')}</p>
+                    <a href="#" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-6 rounded-full">Back to Home</a>
+                </div>
+            `;
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

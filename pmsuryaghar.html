@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Surya Ghar Yojana - Solar Energy Scheme</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'solar-blue': '#2563eb',
+                        'solar-green': '#16a34a',
+                        'solar-orange': '#ea580c'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .solar-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+
+        .green-gradient {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 solar-gradient rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 2L13.09 8.26L20 9L14 14.74L15.18 21.02L10 18L4.82 21.02L6 14.74L0 9L6.91 8.26L10 2Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">PM Surya Ghar Yojana</h1>
+                        <p class="text-sm text-gray-600">Solar Energy for Every Home</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-solar-blue transition-colors">Home</a>
+                    <a href="#eligibility" class="text-gray-700 hover:text-solar-blue transition-colors">Eligibility</a>
+                    <a href="#documents" class="text-gray-700 hover:text-solar-blue transition-colors">Documents</a>
+                    <a href="#apply" class="text-gray-700 hover:text-solar-blue transition-colors">Apply</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-40 w-full h-full bg-cover bg-center "
+        style="background-image: url('https://i.pinimg.com/736x/ca/97/dd/ca97dd67d0e3ab4d1b8213050366a0b4.jpg');">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-6">Transform Your Home with Solar Energy</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join the PM Surya Ghar Yojana and get subsidized solar panels for
+                your home. Reduce electricity bills and contribute to a greener future.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#apply"
+                    class="bg-white text-solar-blue px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">Apply
+                    Now</a>
+                <a href="#eligibility"
+                    class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-solar-blue transition-colors">Check
+                    Eligibility</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Section -->
+    <section id="eligibility" class="py-16 bg-white ">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-800">Eligibility Criteria</h3>
+            <div class="bg-blue-50 rounded-2xl p-8 border-l-8 border-solar-blue">
+                <h4 class="text-2xl font-bold text-solar-blue mb-6">Who is PM Surya Ghar Yojana For?</h4>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">The household must be an Indian citizen</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">Pre-installed meter must be on individual's name</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">Roof must be suitable for installing solar panels</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">Household must have a valid electricity connection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+<div class="bg-white p-6 rounded-xl shadow-xl space-y-6 max-w-3xl mx-auto my-8">
+  <!-- What is PM Surya Ghar Yojana? -->
+  <div>
+    <h2 class="text-2xl font-bold text-blue-800 mb-3 flex items-center gap-2">
+      <i class="fas fa-solar-panel text-yellow-500"></i> What is PM Surya Ghar Yojana?
+    </h2>
+    <p class="text-gray-700 text-justify leading-relaxed">
+      PM Surya Ghar: Muft Bijli Yojana is a government scheme launched by Prime Minister Narendra Modi in 2024 to encourage the use of solar power. This initiative aims to install rooftop solar panels in 1 crore households, offering up to 300 units of free electricity per month. The scheme helps reduce electricity bills and promotes green energy while saving the government approx. ₹75,000 crore per year.
+    </p>
+  </div>
+
+  <!-- Key Benefits -->
+  <div>
+    <h2 class="text-2xl font-bold text-blue-800 mb-3 flex items-center gap-2">
+      <i class="fas fa-gift text-green-600"></i> Key Benefits
+    </h2>
+    <ul class="space-y-3 text-gray-700">
+      <li class="flex gap-3">
+        <i class="fas fa-bolt text-yellow-500 mt-1"></i>
+        <span><strong>Lower Electricity Bills:</strong> Specially benefits households consuming up to 300 units monthly.</span>
+      </li>
+      <li class="flex gap-3">
+        <i class="fas fa-sun text-orange-500 mt-1"></i>
+        <span><strong>Energy Self-sufficiency:</strong> Promotes rooftop solar to reduce dependence on external electricity sources.</span>
+      </li>
+      <li class="flex gap-3">
+        <i class="fas fa-hand-holding-usd text-green-500 mt-1"></i>
+        <span><strong>Economic Relief:</strong> Reduces bills, helping families allocate budget to other needs.</span>
+      </li>
+      <li class="flex gap-3">
+        <i class="fas fa-users text-purple-500 mt-1"></i>
+        <span><strong>Empowerment:</strong> Gives people control over energy use and increases independence.</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+    <!-- Documents Required Section -->
+    <section id="documents" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-800">Documents Required</h3>
+            <div class="bg-green-50 rounded-2xl p-8 border-l-8 border-solar-green">
+                <h4 class="text-2xl font-bold text-solar-green mb-6">Required Documents for Application</h4>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" />
+                            </svg>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Aadhar Card</h5>
+                        <p class="text-sm text-gray-600">Valid Aadhar card for identity verification</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v8H4V6z" />
+                            </svg>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Bank Passbook Photo</h5>
+                        <p class="text-sm text-gray-600">Clear photo of bank passbook first page</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fill-rule="evenodd"
+                                    d="M4 5a2 2 0 012-2v1a2 2 0 002 2h8a2 2 0 002-2V3a2 2 0 012 2v6h-3a2 2 0 00-2 2v4H6a2 2 0 01-2-2V5zm8 8a2 2 0 012-2h3v4a2 2 0 01-2 2v-1a2 2 0 00-2-2h-1v-1z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Electricity Bill</h5>
+                        <p class="text-sm text-gray-600">Latest electricity bill copy</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Income Certificate</h5>
+                        <p class="text-sm text-gray-600">Valid income certificate from authorities</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Passport Size Photo</h5>
+                        <p class="text-sm text-gray-600">Recent passport size photograph</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="apply" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-4xl font-bold text-gray-800 mb-4">Apply for PM Surya Ghar Yojana</h3>
+                    <p class="text-lg text-gray-600">Fill out the form below to apply for the solar energy scheme</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="solar-gradient p-6 text-white text-center">
+                        <h4 class="text-2xl font-bold">Application Form</h4>
+                        <p class="mt-2">Please fill all required fields carefully</p>
+                    </div>
+
+                    <form action="pmsuryaghar.php" id="applicationForm" class="p-8 space-y-6">
+                        <!-- Personal Information -->
+                        <div class="border-b border-gray-200 pb-6">
+                            <h5 class="text-xl font-semibold text-gray-800 mb-4">Personal Information</h5>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name
+                                        *</label>
+                                    <input type="text" id="fullName" name="fullName" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-blue focus:border-transparent transition-all">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email
+                                        Address *</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-blue focus:border-transparent transition-all">
+                                </div>
+                                <div>
+                                    <label for="mobile" class="block text-sm font-medium text-gray-700 mb-2">Mobile
+                                        Number *</label>
+                                    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-blue focus:border-transparent transition-all">
+                                </div>
+                                <div>
+                                    <label for="age" class="block text-sm font-medium text-gray-700 mb-2">Age *</label>
+                                    <input type="number" id="age" name="age" min="18" max="100" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-blue focus:border-transparent transition-all">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Document Uploads -->
+                        <div>
+                            <h5 class="text-xl font-semibold text-gray-800 mb-4">Document Uploads</h5>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Aadhar Card -->
+                                <div>
+                                    <label for="aadharCard" class="block text-sm font-medium text-gray-700 mb-2">Aadhar
+                                        Card *</label>
+                                    <div class="relative">
+                                        <input type="file" id="aadharCard" name="aadharCard"
+                                            accept=".pdf,.jpg,.jpeg,.png" required class="hidden"
+                                            onchange="updateFileName(this, 'aadharLabel')">
+                                        <label for="aadharCard" id="aadharLabel"
+                                            class="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-solar-blue transition-colors flex items-center justify-center text-gray-600">
+                                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Upload Aadhar Card
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Bank Passbook -->
+                                <div>
+                                    <label for="bankPassbook" class="block text-sm font-medium text-gray-700 mb-2">Bank
+                                        Passbook Photo *</label>
+                                    <div class="relative">
+                                        <input type="file" id="bankPassbook" name="bankPassbook"
+                                            accept=".pdf,.jpg,.jpeg,.png" required class="hidden"
+                                            onchange="updateFileName(this, 'bankLabel')">
+                                        <label for="bankPassbook" id="bankLabel"
+                                            class="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-solar-blue transition-colors flex items-center justify-center text-gray-600">
+                                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Upload Bank Passbook
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Electricity Bill -->
+                                <div>
+                                    <label for="electricityBill"
+                                        class="block text-sm font-medium text-gray-700 mb-2">Electricity Bill *</label>
+                                    <div class="relative">
+                                        <input type="file" id="electricityBill" name="electricityBill"
+                                            accept=".pdf,.jpg,.jpeg,.png" required class="hidden"
+                                            onchange="updateFileName(this, 'electricityLabel')">
+                                        <label for="electricityBill" id="electricityLabel"
+                                            class="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-solar-blue transition-colors flex items-center justify-center text-gray-600">
+                                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Upload Electricity Bill
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Income Certificate -->
+                                <div>
+                                    <label for="incomeCertificate"
+                                        class="block text-sm font-medium text-gray-700 mb-2">Income Certificate
+                                        *</label>
+                                    <div class="relative">
+                                        <input type="file" id="incomeCertificate" name="incomeCertificate"
+                                            accept=".pdf,.jpg,.jpeg,.png" required class="hidden"
+                                            onchange="updateFileName(this, 'incomeLabel')">
+                                        <label for="incomeCertificate" id="incomeLabel"
+                                            class="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-solar-blue transition-colors flex items-center justify-center text-gray-600">
+                                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Upload Income Certificate
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Passport Photo -->
+                                <div class="md:col-span-2">
+                                    <label for="passportPhoto"
+                                        class="block text-sm font-medium text-gray-700 mb-2">Passport Size Photo
+                                        *</label>
+                                    <div class="relative max-w-md">
+                                        <input type="file" id="passportPhoto" name="passportPhoto"
+                                            accept=".jpg,.jpeg,.png" required class="hidden"
+                                            onchange="updateFileName(this, 'photoLabel')">
+                                        <label for="passportPhoto" id="photoLabel"
+                                            class="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-solar-blue transition-colors flex items-center justify-center text-gray-600">
+                                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Upload Passport Photo
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="pt-6">
+                            <button type="submit" id="submitBtn"
+                                class="w-full solar-gradient text-white py-4 px-8 rounded-lg font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                                Submit Application
+                            </button>
+                        </div>
+
+                        <!-- Loading State -->
+                        <div id="loadingState" class="hidden text-center py-4">
+                            <div class="inline-flex items-center">
+                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-solar-blue"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                    </path>
+                                </svg>
+                                Submitting your application...
+                            </div>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div id="successMessage"
+                            class="hidden bg-green-50 border border-green-200 rounded-lg p-4 text-green-800">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Application submitted successfully! You will receive a confirmation email shortly.
+                            </div>
+                        </div>
+
+                        <!-- Error Message -->
+                        <div id="errorMessage"
+                            class="hidden bg-red-50 border border-red-200 rounded-lg p-4 text-red-800">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span id="errorText">There was an error submitting your application. Please try
+                                    again.</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h5 class="text-xl font-bold mb-4">PM Surya Ghar Yojana</h5>
+                    <p class="text-gray-300">Empowering every home with clean, renewable solar energy. Join the green
+                        revolution today.</p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#eligibility" class="hover:text-white transition-colors">Eligibility</a></li>
+                        <li><a href="#documents" class="hover:text-white transition-colors">Documents</a></li>
+                        <li><a href="#apply" class="hover:text-white transition-colors">Apply Now</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Contact</h5>
+                    <p class="text-gray-300">For support and queries:</p>
+                    <p class="text-gray-300">Email: support@pmsuryaghar.gov.in</p>
+                    <p class="text-gray-300">Phone: 1800-XXX-XXXX</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 PM Surya Ghar Yojana. All rights reserved. | Government of India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update file name display
+        function updateFileName(input, labelId) {
+            const label = document.getElementById(labelId);
+            if (input.files.length > 0) {
+                const fileName = input.files[0].name;
+                label.innerHTML = `
+                    <svg class="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    ${fileName}
+                `;
+                label.classList.add('border-green-300', 'bg-green-50', 'text-green-700');
+                label.classList.remove('border-gray-300', 'text-gray-600');
+            }
+        }
+
+        // Form submission
+        document.getElementById('applicationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submitBtn');
+            const loadingState = document.getElementById('loadingState');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Hide previous messages
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+
+            // Show loading state
+            submitBtn.classList.add('hidden');
+            loadingState.classList.remove('hidden');
+
+            // Validate form
+            const formData = new FormData(this);
+            let isValid = true;
+            let errorText = '';
+
+            // Check required fields
+            const requiredFields = ['fullName', 'email', 'mobile', 'age'];
+            for (let field of requiredFields) {
+                if (!formData.get(field)) {
+                    isValid = false;
+                    errorText = `Please fill in the ${field.replace(/([A-Z])/g, ' $1').toLowerCase()} field.`;
+                    break;
+                }
+            }
+
+            // Check file uploads
+            const requiredFiles = ['aadharCard', 'bankPassbook', 'electricityBill', 'incomeCertificate', 'passportPhoto'];
+            for (let file of requiredFiles) {
+                if (!formData.get(file) || formData.get(file).size === 0) {
+                    isValid = false;
+                    errorText = `Please upload ${file.replace(/([A-Z])/g, ' $1').toLowerCase()}.`;
+                    break;
+                }
+            }
+
+            // Validate email
+            const email = formData.get('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email && !emailRegex.test(email)) {
+                isValid = false;
+                errorText = 'Please enter a valid email address.';
+            }
+
+            // Validate mobile number
+            const mobile = formData.get('mobile');
+            const mobileRegex = /^[0-9]{10}$/;
+            if (mobile && !mobileRegex.test(mobile)) {
+                isValid = false;
+                errorText = 'Please enter a valid 10-digit mobile number.';
+            }
+
+            // Simulate form submission
+            setTimeout(() => {
+                loadingState.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+
+                if (isValid) {
+                    successMessage.classList.remove('hidden');
+                    this.reset();
+
+                    // Reset file upload labels
+                    const labels = ['aadharLabel', 'bankLabel', 'electricityLabel', 'incomeLabel', 'photoLabel'];
+                    labels.forEach(labelId => {
+                        const label = document.getElementById(labelId);
+                        label.classList.remove('border-green-300', 'bg-green-50', 'text-green-700');
+                        label.classList.add('border-gray-300', 'text-gray-600');
+                    });
+
+                    // Reset label texts
+                    document.getElementById('aadharLabel').innerHTML = `
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Upload Aadhar Card
+                    `;
+                    document.getElementById('bankLabel').innerHTML = `
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Upload Bank Passbook
+                    `;
+                    document.getElementById('electricityLabel').innerHTML = `
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Upload Electricity Bill
+                    `;
+                    document.getElementById('incomeLabel').innerHTML = `
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Upload Income Certificate
+                    `;
+                    document.getElementById('photoLabel').innerHTML = `
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Upload Passport Photo
+                    `;
+                } else {
+                    errorMessage.classList.remove('hidden');
+                    document.getElementById('errorText').textContent = errorText;
+                }
+            }, 2000);
+        });
+
+        // Add floating animation to hero section
+        setInterval(() => {
+            const hero = document.querySelector('.gradient-bg');
+            if (hero) {
+                hero.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%)';
+                setTimeout(() => {
+                    hero.style.background = 'linear-gradient(135deg, #764ba2 0%, #667eea 50%, #764ba2 100%)';
+                }, 3000);
+            }
+        }, 6000);
+    </script>
+</body>
+
+</html>

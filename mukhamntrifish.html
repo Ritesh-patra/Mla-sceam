@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradhan Mantri Matsya Sampada Yojana (PMMSY)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e65c00',
+                        secondary: '#0077b6',
+                        accent: '#ffa500',
+                        light: '#fff9f0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .scheme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .gradient-border {
+            position: relative;
+            border-radius: 0.5rem;
+            background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, #e65c00, #ffa500) border-box;
+            border: 2px solid transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-primary to-accent text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div>
+                        <h1 class="text-3xl font-bold">Pradhan Mantri Matsya Sampada Yojana</h1>
+                        <p class="text-sm">Ministry of Fisheries, Animal Husbandry & Dairying</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#schemes"
+                        class="bg-white text-primary px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition">Schemes</a>
+                    <a href="#apply"
+                        class="bg-secondary text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition">Apply
+                        Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-4xl font-bold text-primary mb-4">Empowering Fisheries Development</h2>
+                    <p class="text-lg text-gray-700 mb-6">The Pradhan Mantri Matsya Sampada Yojana (PMMSY) is a flagship
+                        scheme for focused and sustainable development of the fisheries sector in India with an
+                        estimated investment of ₹20,050 crores.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-md">
+                            <div class="bg-primary rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Financial Support</p>
+                                <p class="text-sm text-gray-600">Up to 40% subsidy</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-md">
+                            <div class="bg-secondary rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Technical Support</p>
+                                <p class="text-sm text-gray-600">Training & guidance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div
+                            class="absolute inset-0 bg-primary rounded-full opacity-10 blur-xl transform -translate-x-4 translate-y-4">
+                        </div>
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250613-WA0012.jpg-ZkEQeCoqjCRK9gqCBX0TY0eu3abwHK.jpeg"
+                            alt="Fisheries Development" class="relative z-10 rounded-lg shadow-xl max-w-full h-auto"
+                            style="max-height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-16" id="features">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Key Features of the Scheme</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 scheme-card transition-all duration-300">
+                    <div class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Enhanced Production</h3>
+                    <p class="text-gray-600">Increase fish production and productivity through expansion,
+                        intensification, diversification and productive utilization of land and water.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 scheme-card transition-all duration-300">
+                    <div class="bg-secondary/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Modern Technology</h3>
+                    <p class="text-gray-600">Introduction of new technologies including biofloc, RAS (Recirculating
+                        Aquaculture System), and cage culture for intensive fish farming.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 scheme-card transition-all duration-300">
+                    <div class="bg-accent/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Livelihood Support</h3>
+                    <p class="text-gray-600">Providing livelihood and nutritional support for socio-economically
+                        backward, women, and SC/ST communities involved in fisheries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schemes Section -->
+    <section class="py-16 bg-light" id="schemes">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Available Schemes</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Various schemes are available under PMMSY to
+                support different aspects of fisheries development with attractive subsidy components.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Scheme 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden scheme-card transition-all duration-300">
+                    <div class="bg-primary text-white p-4">
+                        <h3 class="text-xl font-semibold">Marine Fisheries Development</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250613-WA0009.jpg-HFDjJA9JwFKNc4KDh4PyRQjeseNzk1.jpeg"
+                                alt="Marine Fisheries" class="w-24 h-24 object-cover rounded-lg mr-4">
+                            <div>
+                                <p class="text-gray-700 mb-2">Support for deep-sea fishing vessels and equipment with up
+                                    to 40% subsidy for general category and 60% for SC/ST/Women.</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Subsidy up to ₹12,00,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Modernization of fishing vessels</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Safety equipment for fishermen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Training and capacity building</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Scheme 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden scheme-card transition-all duration-300">
+                    <div class="bg-secondary text-white p-4">
+                        <h3 class="text-xl font-semibold">Inland Fisheries Development</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250613-WA0008.jpg-w9rZxr0b9zDtw2qpOzmIc7ZrCzTu4B.jpeg"
+                                alt="Inland Fisheries" class="w-24 h-24 object-cover rounded-lg mr-4">
+                            <div>
+                                <p class="text-gray-700 mb-2">Construction of new ponds/tanks, renovation of existing
+                                    ponds/tanks and community tanks for freshwater aquaculture.</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Subsidy up to 40% of project cost</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Construction of new ponds and tanks</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Input support for fish farming</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Integrated fish farming</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Scheme 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden scheme-card transition-all duration-300">
+                    <div class="bg-accent text-white p-4">
+                        <h3 class="text-xl font-semibold">Biofloc Technology</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250613-WA0011.jpg-vCSblKCE7uM3XIL94RVUydru1rImYO.jpeg"
+                                alt="Biofloc Technology" class="w-24 h-24 object-cover rounded-lg mr-4">
+                            <div>
+                                <p class="text-gray-700 mb-2">Support for biofloc technology adoption for intensive fish
+                                    and shrimp farming with minimal water usage.</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Subsidy up to 40% for general and 60% for SC/ST/Women</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Biofloc units of various sizes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Equipment support (aerators, blowers)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Technical training and support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Scheme 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden scheme-card transition-all duration-300">
+                    <div class="bg-green-600 text-white p-4">
+                        <h3 class="text-xl font-semibold">Ornamental Fisheries</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250613-WA0010.jpg-LDWw7mVqUv3qlAWAPtoUEpYUQCRyLV.jpeg"
+                                alt="Ornamental Fisheries" class="w-24 h-24 object-cover rounded-lg mr-4">
+                            <div>
+                                <p class="text-gray-700 mb-2">Development of ornamental fish breeding and culture with
+                                    focus on export potential.</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Subsidy up to 40% for general and 60% for SC/ST/Women</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Backyard ornamental fish rearing units</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Medium-scale ornamental fish breeding units</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-0.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Integrated ornamental fish units</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#apply"
+                    class="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 rounded-full transition-colors">Apply
+                    for Scheme Benefits</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subsidy Table -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Subsidy Details</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-xl shadow-lg overflow-hidden">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th class="py-4 px-6 text-left">Component</th>
+                            <th class="py-4 px-6 text-left">Unit Cost (₹)</th>
+                            <th class="py-4 px-6 text-left">General Category (40%)</th>
+                            <th class="py-4 px-6 text-left">SC/ST/Women (60%)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">New Pond Construction (1 hectare)</td>
+                            <td class="py-4 px-6">7,00,000</td>
+                            <td class="py-4 px-6">2,80,000</td>
+                            <td class="py-4 px-6">4,20,000</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">Biofloc Units (4 tanks)</td>
+                            <td class="py-4 px-6">1,50,000</td>
+                            <td class="py-4 px-6">60,000</td>
+                            <td class="py-4 px-6">90,000</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">RAS System (10 ton capacity)</td>
+                            <td class="py-4 px-6">20,00,000</td>
+                            <td class="py-4 px-6">8,00,000</td>
+                            <td class="py-4 px-6">12,00,000</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">Fishing Boat with Net (Up to 10m)</td>
+                            <td class="py-4 px-6">5,00,000</td>
+                            <td class="py-4 px-6">2,00,000</td>
+                            <td class="py-4 px-6">3,00,000</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-medium">Aerators/Equipment</td>
+                            <td class="py-4 px-6">50,000</td>
+                            <td class="py-4 px-6">20,000</td>
+                            <td class="py-4 px-6">30,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-gray-600 mt-4">* Subsidy amounts may vary based on specific scheme guidelines and
+                location</p>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="py-16 bg-light" id="apply">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Apply for Scheme Benefits</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Complete the form below and submit the required
+                documents to apply for fisheries development schemes.</p>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-primary to-accent p-6">
+                    <h3 class="text-2xl font-bold text-white">Document Submission Form</h3>
+                    <p class="text-white/80">Please fill all required fields and upload necessary documents</p>
+                </div>
+
+                <form action="mukhyamantrifish.php" enctype="multipart/form-data" method="post" class="p-6 space-y-6">
+                    <!-- Personal Information -->
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold text-gray-800 pb-2 border-b border-gray-200">Personal
+                            Information</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full
+                                    Name*</label>
+                                <input type="text" id="fullName" name="fullName"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="fatherName"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Father's/Spouse's Name*</label>
+                                <input type="text" id="fatherName" name="fatherName"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="mobile" class="block text-sm font-medium text-gray-700 mb-1">Mobile
+                                    Number*</label>
+                                <input type="tel" id="mobile" name="mobile"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email
+                                    Address</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Complete
+                                    Address*</label>
+                                <textarea id="address" name="address" rows="2"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required></textarea>
+                            </div>
+                            <div>
+                                <label for="district"
+                                    class="block text-sm font-medium text-gray-700 mb-1">District*</label>
+                                <select id="district" name="district"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                                    <option value="">Select District</option>
+                                    <option value="district1">District 1</option>
+                                    <option value="district2">District 2</option>
+                                    <option value="district3">District 3</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="category"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Category*</label>
+                                <select id="category" name="category"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                                    <option value="">Select Category</option>
+                                    <option value="general">General</option>
+                                    <option value="sc">SC</option>
+                                    <option value="st">ST</option>
+                                    <option value="obc">OBC</option>
+                                    <option value="women">Women</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold text-gray-800 pb-2 border-b border-gray-200">Project Details
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="schemeType" class="block text-sm font-medium text-gray-700 mb-1">Scheme
+                                    Type*</label>
+                                <select id="schemeType" name="schemeType"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                                    <option value="">Select Scheme</option>
+                                    <option value="marine">Marine Fisheries Development</option>
+                                    <option value="inland">Inland Fisheries Development</option>
+                                    <option value="biofloc">Biofloc Technology</option>
+                                    <option value="ornamental">Ornamental Fisheries</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="projectCost" class="block text-sm font-medium text-gray-700 mb-1">Estimated
+                                    Project Cost (₹)*</label>
+                                <input type="number" id="projectCost" name="projectCost"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="projectDescription"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Brief Project
+                                    Description*</label>
+                                <textarea id="projectDescription" name="projectDescription" rows="3"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required></textarea>
+                            </div>
+                            <div>
+                                <label for="landArea" class="block text-sm font-medium text-gray-700 mb-1">Land Area (in
+                                    acres/hectares)*</label>
+                                <input type="text" id="landArea" name="landArea"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="waterSource" class="block text-sm font-medium text-gray-700 mb-1">Water
+                                    Source*</label>
+                                <select id="waterSource" name="waterSource"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                                    <option value="">Select Water Source</option>
+                                    <option value="borewell">Borewell</option>
+                                    <option value="canal">Canal</option>
+                                    <option value="river">River</option>
+                                    <option value="pond">Existing Pond</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Upload -->
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold text-gray-800 pb-2 border-b border-gray-200">Required Documents
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-4">Please upload clear, legible scanned copies or photos of
+                            the following documents (PDF, JPG or PNG format, max 2MB each)</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="aadhaar" class="block text-sm font-medium text-gray-700 mb-1">Aadhaar
+                                    Card*</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-md p-4 text-center hover:border-primary transition-colors">
+                                    <input type="file" id="aadhaar" name="aadhaar" class="hidden"
+                                        accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <label for="aadhaar" class="cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-8 w-8 text-gray-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <span class="mt-2 block text-sm text-gray-600">Click to upload Aadhaar
+                                            Card</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="pan" class="block text-sm font-medium text-gray-700 mb-1">PAN Card*</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-md p-4 text-center hover:border-primary transition-colors">
+                                    <input type="file" id="pan" name="pan" class="hidden" accept=".pdf,.jpg,.jpeg,.png"
+                                        required>
+                                    <label for="pan" class="cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-8 w-8 text-gray-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <span class="mt-2 block text-sm text-gray-600">Click to upload PAN Card</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="bankDetails" class="block text-sm font-medium text-gray-700 mb-1">Bank
+                                    Account Details*</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-md p-4 text-center hover:border-primary transition-colors">
+                                    <input type="file" id="bankDetails" name="bankDetails" class="hidden"
+                                        accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <label for="bankDetails" class="cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-8 w-8 text-gray-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <span class="mt-2 block text-sm text-gray-600">Click to upload Bank
+                                            Passbook/Statement</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="businessReg" class="block text-sm font-medium text-gray-700 mb-1">Business
+                                    Registration Certificate*</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-md p-4 text-center hover:border-primary transition-colors">
+                                    <input type="file" id="businessReg" name="businessReg" class="hidden"
+                                        accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <label for="businessReg" class="cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-8 w-8 text-gray-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <span class="mt-2 block text-sm text-gray-600">Click to upload Business
+                                            Registration</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="projectReport" class="block text-sm font-medium text-gray-700 mb-1">Project
+                                    Report*</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-md p-4 text-center hover:border-primary transition-colors">
+                                    <input type="file" id="projectReport" name="projectReport" class="hidden"
+                                        accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <label for="projectReport" class="cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-8 w-8 text-gray-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <span class="mt-2 block text-sm text-gray-600">Click to upload Project
+                                            Report</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="landDocuments" class="block text-sm font-medium text-gray-700 mb-1">Land
+                                    Documents*</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-md p-4 text-center hover:border-primary transition-colors">
+                                    <input type="file" id="landDocuments" name="landDocuments" class="hidden"
+                                        accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <label for="landDocuments" class="cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-8 w-8 text-gray-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <span class="mt-2 block text-sm text-gray-600">Click to upload Land
+                                            Documents</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="partnershipDeed"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Partnership Deed/MOA (if
+                                    applicable)</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-md p-4 text-center hover:border-primary transition-colors">
+                                    <input type="file" id="partnershipDeed" name="partnershipDeed" class="hidden"
+                                        accept=".pdf,.jpg,.jpeg,.png">
+                                    <label for="partnershipDeed" class="cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-8 w-8 text-gray-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <span class="mt-2 block text-sm text-gray-600">Click to upload Partnership
+                                            Deed/MOA</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Declaration -->
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold text-gray-800 pb-2 border-b border-gray-200">Declaration</h4>
+                        <div class="flex items-start">
+                            <input type="checkbox" id="declaration" name="declaration"
+                                class="mt-1 h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary" required>
+                            <label for="declaration" class="ml-2 block text-sm text-gray-700">
+                                I hereby declare that all the information provided by me is true to the best of my
+                                knowledge. I understand that providing false information may result in rejection of my
+                                application and legal action as per applicable laws.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center pt-4">
+                        <button type="submit"
+                            class="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-all hover:scale-105">
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Pradhan Mantri Matsya Sampada Yojana</h3>
+                    <p class="text-gray-400">A scheme to bring about Blue Revolution through sustainable and responsible
+                        development of fisheries sector in India.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-primary" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Department of Fisheries, Ministry of Fisheries, Animal Husbandry & Dairying,
+                                Government of India</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-primary" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>Toll-Free: 1800-425-1660</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-primary" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>Email: pmmsy@gov.in</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                        </li>
+                        <li>
+                            <a href="#schemes" class="text-gray-400 hover:text-white transition-colors">Schemes</a>
+                        </li>
+                        <li>
+                            <a href="#apply" class="text-gray-400 hover:text-white transition-colors">Apply Now</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Guidelines</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Pradhan Mantri Matsya Sampada Yojana. All rights reserved.</p>
+                <p class="mt-2 text-sm">Designed and developed for fisheries development in India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // File upload preview
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', function () {
+                const label = this.nextElementSibling;
+                if (this.files.length > 0) {
+                    const fileName = this.files[0].name;
+                    const span = label.querySelector('span');
+                    if (span) {
+                        span.textContent = `Selected: ${fileName}`;
+                        span.classList.add('text-green-600', 'font-medium');
+                    }
+
+                    // Change the SVG color to green
+                    const svg = label.querySelector('svg');
+                    if (svg) {
+                        svg.classList.remove('text-gray-400');
+                        svg.classList.add('text-green-600');
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Show success message
+            const formContainer = this.parentElement;
+            formContainer.innerHTML = `
+                <div class="p-8 text-center">
+                    <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Application Submitted Successfully!</h3>
+                    <p class="text-gray-600 mb-6">Your application has been received. Our team will review it and contact you soon.</p>
+                    <p class="text-gray-600 mb-2">Application Reference Number:</p>
+                    <p class="text-xl font-bold text-primary mb-6">${Math.floor(Math.random() * 1000000).toString().padStart(6, '0')}</p>
+                    <a href="#" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-6 rounded-full">Back to Home</a>
+                </div>
+            `;
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

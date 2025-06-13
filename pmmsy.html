@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Submission Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Header -->
+    <!-- Font Awesome for icons -->
+
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo and Title -->
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl md:text-3xl font-bold text-white">Pradhan Mantri Matsya Sampada Yojana</h1>
+                </div>
+
+                <!-- Navigation (Optional) -->
+                <nav class="hidden md:flex space-x-6 text-white font-medium">
+                    <a href="about.html" class="hover:underline">About Scheme</a>
+                    <a href="eligibility.html" class="hover:underline">Eligibility</a>
+                    <a href="benefits.html" class="hover:underline">Benefits</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- Hero Section for SECAM (Common Header) -->
+        <div class="bg-gradient-to-r from-blue-500 via-green-400 to-blue-500 text-white py-20 px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Special Employment cum Comprehensive Assistance Mission
+                (SECAM)</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto">Empowering rural youth, farmers, and entrepreneurs with
+                livelihood opportunities through structured government schemes.</p>
+        </div>
+
+        <!-- Page 1: About the Scheme -->
+        <section class="max-w-4xl mx-auto p-6 mt-8">
+            <h2 class="text-3xl font-bold text-blue-700 mb-4">About the Scheme</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                SECAM is a state-level mission to promote employment and entrepreneurship among the rural population. It
+                brings together various government schemes under one umbrella to provide training, financial assistance,
+                and necessary support to individuals in agriculture, livestock, fisheries, and related sectors.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                By simplifying application procedures and enhancing access to resources, SECAM helps beneficiaries build
+                sustainable income sources.
+            </p>
+        </section>
+
+        <!-- Page 2: Eligibility -->
+        <section class="max-w-4xl mx-auto p-6 mt-12">
+            <h2 class="text-3xl font-bold text-green-700 mb-4">Eligibility</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Residents of Odisha (preferably rural or semi-urban areas)</li>
+                <li>Individuals between 18-45 years (age limit may vary by scheme)</li>
+                <li>Priority to SC/ST, women, BPL, Antyodaya, and physically challenged applicants</li>
+                <li>Applicants with land ownership or valid lease agreement (for land-based activities)</li>
+                <li>Willingness to participate in training and capacity-building programs</li>
+            </ul>
+        </section>
+
+        <!-- Page 3: Benefits -->
+        <section class="max-w-4xl mx-auto p-6 mt-12">
+            <h2 class="text-3xl font-bold text-purple-700 mb-4">Benefits</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Up to 60-75% financial assistance for eligible projects</li>
+                <li>Subsidized loans and margin money support</li>
+                <li>Free or low-cost training and technical guidance</li>
+                <li>Support in preparing DPR (Detailed Project Reports)</li>
+                <li>Market linkage and branding assistance for products</li>
+                <li>Priority in various sectoral government schemes</li>
+            </ul>
+        </section>
+        <!-- Documents Required Section -->
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Documents Required</h2>
+                    <p class="text-gray-600 text-lg">Please ensure you have all the following documents ready for
+                        submission</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Aadhaar Card -->
+                    <div
+                        class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-6 text-white transform hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold">Aadhaar Card</h3>
+                        </div>
+                        <p class="text-blue-100">Government issued identity proof</p>
+                    </div>
+
+                    <!-- PAN Card -->
+                    <div
+                        class="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-6 text-white transform hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v8H4V6z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold">PAN Card</h3>
+                        </div>
+                        <p class="text-green-100">Permanent Account Number</p>
+                    </div>
+
+                    <!-- Bank Account Details -->
+                    <div
+                        class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-6 text-white transform hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v8H4V6z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold">Bank Account Details</h3>
+                        </div>
+                        <p class="text-purple-100">Account number & IFSC code</p>
+                    </div>
+
+                    <!-- Business Registration -->
+                    <div
+                        class="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-6 text-white transform hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold">Business Registration</h3>
+                        </div>
+                        <p class="text-orange-100">Certificate of incorporation</p>
+                    </div>
+
+                    <!-- Project Report -->
+                    <div
+                        class="bg-gradient-to-r from-red-500 to-red-600 rounded-xl p-6 text-white transform hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                    <path fill-rule="evenodd"
+                                        d="M4 5a2 2 0 012-2v1a1 1 0 001 1h6a1 1 0 001-1V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold">Project Report</h3>
+                        </div>
+                        <p class="text-red-100">Detailed project documentation</p>
+                    </div>
+
+                    <!-- Land Documents -->
+                    <div
+                        class="bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl p-6 text-white transform hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold">Land Documents</h3>
+                        </div>
+                        <p class="text-teal-100">Lease agreements, ownership docs, NOC</p>
+                    </div>
+                </div>
+
+                <!-- Partnership/MOA -->
+                <div class="mt-6 max-w-2xl mx-auto">
+                    <div
+                        class="bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl p-6 text-white transform hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold">Partnership Deed or MOA</h3>
+                        </div>
+                        <p class="text-indigo-100">Partnership agreement or Memorandum of Association</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Document Submission Form -->
+        <section>
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Submit Your Documents</h2>
+                    <p class="text-gray-600 text-lg">Fill in the details and upload your documents</p>
+                </div>
+
+                <form class="max-w-4xl mx-auto space-y-8">
+                    <!-- Personal Information -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+                            <span
+                                class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm">1</span>
+                            Personal Information
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Enter your full name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Enter your email">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Enter your phone number">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Aadhaar Number</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Enter Aadhaar number">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Uploads -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+                            <span
+                                class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm">2</span>
+                            Document Uploads
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Aadhaar Card</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors">
+                                    <input type="file" class="hidden" id="aadhaar" accept=".pdf,.jpg,.jpeg,.png">
+                                    <label for="aadhaar" class="cursor-pointer">
+                                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none"
+                                            viewBox="0 0 48 48">
+                                            <path
+                                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <p class="mt-2 text-sm text-gray-600">Click to upload Aadhaar Card</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">PAN Card</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors">
+                                    <input type="file" class="hidden" id="pan" accept=".pdf,.jpg,.jpeg,.png">
+                                    <label for="pan" class="cursor-pointer">
+                                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none"
+                                            viewBox="0 0 48 48">
+                                            <path
+                                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <p class="mt-2 text-sm text-gray-600">Click to upload PAN Card</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Bank Account Details</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors">
+                                    <input type="file" class="hidden" id="bank" accept=".pdf,.jpg,.jpeg,.png">
+                                    <label for="bank" class="cursor-pointer">
+                                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none"
+                                            viewBox="0 0 48 48">
+                                            <path
+                                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <p class="mt-2 text-sm text-gray-600">Click to upload Bank Details</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Business
+                                    Registration</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors">
+                                    <input type="file" class="hidden" id="business" accept=".pdf,.jpg,.jpeg,.png">
+                                    <label for="business" class="cursor-pointer">
+                                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none"
+                                            viewBox="0 0 48 48">
+                                            <path
+                                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <p class="mt-2 text-sm text-gray-600">Click to upload Business Registration</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Project Report</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors">
+                                    <input type="file" class="hidden" id="project" accept=".pdf,.jpg,.jpeg,.png">
+                                    <label for="project" class="cursor-pointer">
+                                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none"
+                                            viewBox="0 0 48 48">
+                                            <path
+                                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <p class="mt-2 text-sm text-gray-600">Click to upload Project Report</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Land Documents</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors">
+                                    <input type="file" class="hidden" id="land" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                                    <label for="land" class="cursor-pointer">
+                                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none"
+                                            viewBox="0 0 48 48">
+                                            <path
+                                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <p class="mt-2 text-sm text-gray-600">Click to upload Land Documents</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partnership/MOA Upload -->
+                        <div class="mt-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Partnership Deed or MOA</label>
+                            <div
+                                class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors">
+                                <input type="file" class="hidden" id="partnership" accept=".pdf,.jpg,.jpeg,.png">
+                                <label for="partnership" class="cursor-pointer">
+                                    <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none"
+                                        viewBox="0 0 48 48">
+                                        <path
+                                            d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <p class="mt-2 text-sm text-gray-600">Click to upload Partnership Deed or MOA</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+                            <span
+                                class="bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm">3</span>
+                            Additional Information
+                        </h3>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Comments or Additional
+                                Notes</label>
+                            <textarea rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Any additional information you'd like to provide..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Submit -->
+                    <div class="text-center">
+                        <div class="mb-6">
+                            <label class="flex items-center justify-center">
+                                <input type="checkbox"
+                                    class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+                                <span class="ml-3 text-gray-700">I agree to the <a href="#"
+                                        class="text-primary hover:underline">terms and conditions</a> and confirm that
+                                    all information provided is accurate.</span>
+                            </label>
+                        </div>
+                        <button type="submit"
+                            class="bg-gradient-to-r from-primary to-blue-600 text-white px-12 py-4 rounded-xl text-lg font-semibold hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all shadow-lg">
+                            Submit Documents
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-300">© 2024 Document Submission Portal. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add some interactivity
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', function (e) {
+                const label = this.nextElementSibling || this.parentElement.querySelector('label');
+                if (this.files.length > 0) {
+                    const fileName = this.files[0].name;
+                    const p = label.querySelector('p');
+                    if (p) {
+                        p.textContent = `Selected: ${fileName}`;
+                        p.className = 'mt-2 text-sm text-green-600 font-medium';
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Form submitted successfully! (This is a demo)');
+        });
+    </script>
+</body>
+
+</html>

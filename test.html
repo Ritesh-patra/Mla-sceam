@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Farming Assistance Scheme - Application Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center">
+                <div class="flex items-center">
+                    <div class="bg-white p-3 rounded-full mr-4">
+                        <i class="fas fa-feather-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">Poultry Farming Assistance Scheme</h1>
+                        <p class="text-blue-100">Application Form</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Form Container -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto">
+            <form action="cmkrushi.php" method="post" enctype="multipart/form-data" id="poultryForm" class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Application Form</h2>
+                
+                <div class="space-y-6">
+                    <!-- Full Name -->
+                    <div>
+                        <label for="full_name" class="block text-gray-700 font-medium mb-2">
+                            Full Name <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="full_name" name="full_name" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               required>
+                    </div>
+
+                    <!-- Father's/Husband's Name -->
+                    <div>
+                        <label for="father_husband_name" class="block text-gray-700 font-medium mb-2">
+                            Father's/Husband's Name <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="father_husband_name" name="father_husband_name" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               required>
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div>
+                        <label for="mobile_number" class="block text-gray-700 font-medium mb-2">
+                            Mobile Number <span class="text-red-500">*</span>
+                        </label>
+                        <input type="tel" id="mobile_number" name="mobile_number" pattern="[0-9]{10}" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               required>
+                    </div>
+
+                    <!-- Aadhaar Number -->
+                    <div>
+                        <label for="aadhaar_number" class="block text-gray-700 font-medium mb-2">
+                            Aadhaar Number <span class="text-red-500">*</span>
+                        </label>
+                        <input type="number" id="aadhaar_number" name="aadhaar_number" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               required>
+                    </div>
+
+                    <!-- Land Ownership Documents -->
+                    <div>
+                        <label for="land_ownership_docs" class="block text-gray-700 font-medium mb-2">
+                            Land Ownership Documents Upload <span class="text-red-500">*</span>
+                        </label>
+                        <input type="file" id="land_ownership_docs" name="land_ownership_docs" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+
+                    <!-- Lease Agreement -->
+                    <div>
+                        <label for="lease_agreement" class="block text-gray-700 font-medium mb-2">
+                            Ya phir Lease Agreement (15 years min.) Upload
+                        </label>
+                        <input type="file" id="lease_agreement" name="lease_agreement" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+
+                    <!-- Caste Certificate -->
+                    <div>
+                        <label for="caste_certificate" class="block text-gray-700 font-medium mb-2">
+                            Caste Certificate (if applicable)
+                        </label>
+                        <input type="file" id="caste_certificate" name="caste_certificate" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+
+                    <!-- Disability Certificate -->
+                    <div>
+                        <label for="disability_certificate" class="block text-gray-700 font-medium mb-2">
+                            Disability Certificate (if applicable)
+                        </label>
+                        <input type="file" id="disability_certificate" name="disability_certificate" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+
+                    <!-- BPL/Antyodaya Ration Card -->
+                    <div>
+                        <label for="bpl_ration_card" class="block text-gray-700 font-medium mb-2">
+                            BPL/Antyodaya Ration Card (if applicable)
+                        </label>
+                        <input type="file" id="bpl_ration_card" name="bpl_ration_card" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+
+                    <!-- Farmer ID Card -->
+                    <div>
+                        <label for="farmer_id_card" class="block text-gray-700 font-medium mb-2">
+                            Farmer ID Card (if applicable)
+                        </label>
+                        <input type="file" id="farmer_id_card" name="farmer_id_card" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+
+                    <!-- Bank Passbook -->
+                    <div>
+                        <label for="bank_passbook" class="block text-gray-700 font-medium mb-2">
+                            Bank Passbook (1st Page) Upload <span class="text-red-500">*</span>
+                        </label>
+                        <input type="file" id="bank_passbook" name="bank_passbook" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+
+                    <!-- Bank Account Number -->
+                    <div>
+                        <label for="bank_account_number" class="block text-gray-700 font-medium mb-2">
+                            Bank Account Number <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="bank_account_number" name="bank_account_number" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               required>
+                    </div>
+
+                    <!-- Bank IFSC Code -->
+                    <div>
+                        <label for="bank_ifsc_code" class="block text-gray-700 font-medium mb-2">
+                            Bank IFSC Code <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="bank_ifsc_code" name="bank_ifsc_code" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                               required>
+                    </div>
+
+                    <!-- Project Location Address -->
+                    <div>
+                        <label for="project_location_address" class="block text-gray-700 font-medium mb-2">
+                            Project Location Address <span class="text-red-500">*</span>
+                        </label>
+                        <textarea id="project_location_address" name="project_location_address" rows="4" 
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                  required></textarea>
+                    </div>
+
+                    <!-- Declaration Checkbox -->
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <div class="flex items-start">
+                            <input type="checkbox" id="declaration" name="declaration" class="mt-1 mr-3" required>
+                            <label for="declaration" class="text-gray-700">
+                                <span class="text-red-500">*</span> I hereby declare that all the information provided by me in this application is true and correct to the best of my knowledge and belief. I understand that providing false information may result in rejection of my application and legal action. I agree to abide by all terms and conditions of the Poultry Farming Assistance Scheme.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex justify-center pt-6">
+                        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            <i class="fas fa-paper-plane mr-2"></i>Submit Application
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md mx-4">
+            <div class="text-center">
+                <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Application Submitted Successfully!</h3>
+                <p class="text-gray-600 mb-4">Your application has been submitted. You will receive a confirmation shortly.</p>
+                <p class="text-sm text-gray-500 mb-6">Application ID: <span id="applicationId" class="font-mono font-bold"></span></p>
+                <button onclick="closeModal()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generateApplicationId() {
+            const timestamp = Date.now();
+            const random = Math.floor(Math.random() * 1000);
+            return `PFS${timestamp}${random}`.slice(-12);
+        }
+
+        function showSuccessModal() {
+            const applicationId = generateApplicationId();
+            document.getElementById('applicationId').textContent = applicationId;
+            document.getElementById('successModal').classList.remove('hidden');
+            document.getElementById('successModal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            document.getElementById('successModal').classList.remove('flex');
+            // Reset form
+            document.getElementById('poultryForm').reset();
+        }
+
+        function validateForm() {
+            const requiredFields = document.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    field.classList.remove('border-red-500');
+                }
+            });
+
+            // Validate mobile number
+            const mobile = document.getElementById('mobile_number').value;
+            if (mobile && !/^[0-9]{10}$/.test(mobile)) {
+                document.getElementById('mobile_number').classList.add('border-red-500');
+                alert('Please enter a valid 10-digit mobile number');
+                isValid = false;
+            }
+
+            // Validate Aadhaar number
+            const aadhaar = document.getElementById('aadhaar_number').value;
+            if (aadhaar && !/^[0-9]{12}$/.test(aadhaar)) {
+                document.getElementById('aadhaar_number').classList.add('border-red-500');
+                alert('Please enter a valid 12-digit Aadhaar number');
+                isValid = false;
+            }
+
+            // Validate IFSC code
+            const ifsc = document.getElementById('bank_ifsc_code').value;
+            if (ifsc && !/^[A-Z]{4}0[A-Z0-9]{6}$/.test(ifsc)) {
+                document.getElementById('bank_ifsc_code').classList.add('border-red-500');
+                alert('Please enter a valid IFSC code');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Form submission
+        document.getElementById('poultryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateForm()) {
+                // Simulate form submission
+                setTimeout(() => {
+                    showSuccessModal();
+                }, 1000);
+            }
+        });
+
+        // Remove error styling on input
+        document.querySelectorAll('input, textarea').forEach(field => {
+            field.addEventListener('input', function() {
+                this.classList.remove('border-red-500');
+            });
+        });
+    </script>
+</body>
+</html>
